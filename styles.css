@@ -162,6 +162,12 @@ body {
     margin: 2rem 0;
 }
 
+.slider h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
 .slide {
     text-align: center;
     padding: 1rem;
