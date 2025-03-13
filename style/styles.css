@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 1rem;
-    background-color: #ff6a00; /* Orange background like in your screenshots */
+    background-color: #ff6a00; 
     position: sticky;
     top: 0;
     z-index: 100;
@@ -28,12 +28,12 @@ body {
 
 
 .nav-menu {
-    display: none; /* Hidden by default on mobile */
+    display: none; 
 
 }
 
 .menu-icon {
-    display: block; /* Visible by default on mobile */
+    display: block; 
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -103,6 +103,7 @@ body {
     position: relative;
     overflow: hidden;
     background-color: #222a33;
+    border-radius: 15px;
      /*background color sementara, yg penting ada dlu, warnain bisa nantian  */
   }
 
@@ -149,7 +150,7 @@ body {
   }
   
   .pricing-option {
-    border: 3px solid #66fcf1;
+    border: 3px solid #ff6a00;
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
@@ -160,7 +161,7 @@ body {
 
   .pricing-option h2 {
     text-align: center;
-    color: #66fcf1;
+    color: #ff6a00;
   }
 
   .pricing-option p {
@@ -177,7 +178,7 @@ body {
   
   .pricing-option ul li {
     padding: 8px 0;
-    border-bottom: 1px solid #66fcf1;
+    border-bottom: 1px solid #ff6a00;
     list-style: circle;
     margin-left: 20px;
   }
