@@ -11,33 +11,192 @@
         <!-- Header -->
         <header class="header">
             <div class="logo">
-                <span style="color: white; font-weight: bold; margin-left: 5px;">OMK</span>
+                <img src="assets/ui_omk_logo.png" alt="logo omk" height="50px"> 
+                 <!--nanti heigh nya diatur lagi, tadinya ane pake max-height 20%, tapi ini gabisa-->
+                <span style="color: white; font-weight: bold; margin-left: 1em;">Jek - Ojek Mitra Kampus</span>
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li class="dropdown">
+                    <li><a href="home">Home</a></li>
+                    <!-- <li class="dropdown">
                         <a href="#">Partner with us <span class="dropdown-arrow">▼</span></a>
-                    </li>
-                    <li><a href="#">GoCorp</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li class="dropdown">
+                    </li> -->
+                    <li><a href="about">About</a></li>
+                    <!-- include about us, visi misi, why choose us -->
+                    <li><a href="#">Features</a></li>
+                    <!-- <li class="dropdown">
                         <a href="#">Company <span class="dropdown-arrow">▼</span></a>
-                    </li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Help</a></li>
+                    </li> -->
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <!-- <li><a href="#">Help</a></li> -->
                 </ul>
             </nav>
             <div class="menu-icon">&#9776;</div>
         </header>
 
         <!-- Hero Section with Product Grid -->
-        <!-- <section class="hero">
-            <h1>We build products that nations run on</h1>
-            <a href="#" class="button">View all products</a>
-        </section> -->
+        <section id="home" class="hero">
+            <h1>Cuma Rp 10.000, bisa pesan ojek yang cepat, aman, dan nyaman</h1>
+            <h2>Harga pas, tanpa nego</h2>
+            <a href="https://www.figma.com/design/m7IZHGyGPSgOtNWLPlBbos/OMK?m=auto&t=wl3Vj22p5blNziUP-6" class="button">Unduh Sekarang!</a>
+        </section>
+        
+        <section id="about">
+            <!-- About OMK -->
+            <div class="about">
+                <img src="assets/opang1.jpg" alt="opang1">
+                <h1>Jek-OMK: Solusi Transportasi Praktis di UI!</h1>
+                <h2 id="about-h2">Mau ke kelas tepat waktu tanpa ribet? Jek-OMK hadir untuk membantu mobilitasmu di dalam kampus UI dengan cepat, aman, dan nyaman! Pesan ojek kampus hanya dengan beberapa klik, lacak driver secara real-time, dan pilih metode pembayaran sesuai kebutuhanmu.
+                </h2>
+                <h2 id="about-h2">Lebih Cepat, Lebih Mudah, Lebih Nyaman!</h2>
+            </div>
 
+            <div class="container">
+                <div class="pricing-table">
+                    <div class="pricing-option free">
+                        <h2>Visi</h2>
+                        <p>Menjadi solusi transportasi kampus yang aman, efisien, 
+                            dan ramah lingkungan bagi seluruh civitas akademika UI.</p>
+                    </div>
+                    <div class="pricing-option plus">
+                        <h2>Misi</h2>
+                        <ul>
+                            <li>Memberikan layanan transportasi yang mudah diakses dan terjangkau</li>
+                            <li>Menyediakan sistem pemesanan yang cepat dan akurat</li>
+                            <li>Meningkatkan keselamatan dan kenyamanan pengguna</li>
+                            <li>Mendukung mobilitas kampus yang lebih ramah lingkungan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="join">
+            <h2>Why Choose Us?</h2>
+            
+            <div class="join-options">
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h3>Terjangkau</h3>
+                        <p>Flat 10K, Harga sesuai kantong mahasiswa.</p>
+                    </div>
+                </div>
+                
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h3>Cepat & Praktis</h3>
+                        <p>Nggak perlu antre atau buang waktu.</p>
+                    </div>
+                </div>
+                
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h3>Aman & Terpercaya</h3>
+                        <p>Mitra driver resmi di dalam lingkungan UI.</p>
+                    </div>
+                </div>
+
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h3>Ramah Lingkungan</h3>
+                        <p>Mengurangi kemacetan & polusi di kampus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Main Features -->
+
+        <div class="about">
+            <h1>Main Features</h1>
+            <img src="assets/appsnapshot.jpg" alt="appsnapshot">
+            <h2 id="about-h2">Kenapa Harus Pakai Jek-OMK?</h2>
+            <br>
+                <p>✅ Pesan Ojek Instan – Tanpa antre, tanpa ribet! <p>
+                <p>✅ Pelacakan Real-Time – Lihat posisi driver secara langsung. <p>
+                <p>✅ Estimasi Tarif Transparan – Nggak perlu khawatir kena tarif nggak jelas. <p>
+                <p>✅ Metode Pembayaran Fleksibel – Bisa GoPay atau tunai. <p>
+                <p>✅ Aman & Terpercaya – Driver mitra resmi di lingkungan kampus UI. <p>
+            <!-- <ul>
+                <p>Pesan Ojek Instan – Tanpa antre, tanpa ribet!</p>
+                <p>Pelacakan Real-Time – Lihat posisi driver secara langsung.</p>
+                <p>Estimasi Tarif Transparan – Nggak perlu khawatir kena tarif nggak jelas.</p>
+                <p>Metode Pembayaran Fleksibel – Bisa GoPay atau tunai.</p>
+                <p>Aman & Terpercaya – Driver mitra resmi di lingkungan kampus UI.</p>
+            </ul> -->
+            <!-- to be consider bisa paker p atau ul -->
+        </div>
+
+        <!-- Why Choose Us -->
+        <!-- <section class="join">
+            <h2>Frequent Ask Question</h2>
+            
+            <div class="join-options">
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h4>Siapa saja yang bisa pakai Jek-OMK?</h4>
+                        <p>Jek-OMK bisa digunakan oleh siapapun yang mengunduh aplikasi Jek.</p>
+                    </div>
+                </div>
+                
+            <div class="join-options">
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h4>Bagaimana cara membayar Jek-OMK?</h4>
+                        <p>Kamu bisa membayar pakai GoPay atau tunai langsung ke driver.</p>
+                    </div>
+                </div>
+                
+            <div class="join-options">
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h4>Bagaimana jika saya lupa barang di ojek?</h4>
+                        <p> Hubungi customer service Jek-OMK atau gunakan fitur "Lapor Barang Hilang" di aplikasi.</p>
+                    </div>
+                </div>
+                
+            <div class="join-options">
+                <div class="join-option">
+                    <div class="option-icon"></div>
+                    <div class="option-content">
+                        <h4>Apakah tarifnya tetap atau berubah?</h4>
+                        <p>💡 Tarif sudah dihitung otomatis berdasarkan jarak perjalananmu.</p>
+                    </div>
+                </div>
+        </section> -->
+               
+        
+        <section>
+            <div class="container">
+                    <div class="pricing-option plus">
+                        <h2>Frequent Asked Question</h2>
+                        <h3>Masih Bingung? Cek Jawaban di Sini!</h3>
+                        <ul>
+                            <li>❓ Siapa saja yang bisa pakai Jek-OMK?<br>
+                                💡 Jek-OMK bisa digunakan oleh mahasiswa, dosen, dan staf UI.</li>
+                            <li>❓ Bagaimana cara membayar Jek-OMK?<br>
+                                💡 Kamu bisa membayar pakai GoPay atau tunai langsung</li>
+                            <li>❓ Bagaimana jika saya lupa barang di ojek?<br>
+                                💡 Hubungi customer service Jek-OMK atau gunakan fitur "Lapor Barang Hilang" di aplikasi.</li>
+                            <li>❓ Apakah tarifnya tetap atau berubah?<br>
+                                💡 Tarif sudah dihitung otomatis berdasarkan jarak perjalananmu.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Of Content -->
         <!-- Services Grid -->
 
         
@@ -118,8 +277,9 @@
             </div>
         </div> -->
 
+        <!-- ini bisa jadi why choose us -->
         <!-- Join Section -->
-        <section class="join">
+        <!-- <section class="join">
             <h2>Join the ride</h2>
             
             <div class="join-options">
@@ -150,7 +310,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Slider Section -->
         <section class="slider">
