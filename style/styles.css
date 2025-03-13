@@ -6,14 +6,39 @@
 }
 
 body {
-    background-color: #101820;
+    background-image: url('../assets/Bikun.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+    z-index: -1;
+}
+
+
+.container {
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
 .header {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,12 +48,27 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 15cm;
+    /* border-radius: 15cm; */
 }
 
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-left: 5rem;
+}
+
+.logo-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
 
 .nav-menu {
     display: none; 
+    margin-right: 5rem;
 
 }
 
@@ -52,6 +92,7 @@ body {
 }
 
 .nav-menu a {
+    font-family: "Poppins", sans-serif;
     color: white;
     text-decoration: none;
     font-size: 1rem;
@@ -70,7 +111,14 @@ body {
 .hero {
     padding: 2rem 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
+
+
 
 .hero h1 {
     font-size: 2.5rem;
@@ -89,8 +137,18 @@ body {
     margin: 0.5rem;
 }
 
+
+.hero h1, .hero .button {
+    position: relative;
+    z-index: 2; /* Ensures text and button appear above overlay */
+}
+
+
+
 /* About Us Section */
 .about {
+    width: 100vw; /* Full width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,9 +161,8 @@ body {
     position: relative;
     overflow: hidden;
     background-color: #222a33;
-    border-radius: 15px;
-     /*background color sementara, yg penting ada dlu, warnain bisa nantian  */
-  }
+}
+
 
   .about h1 {
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
@@ -137,7 +194,7 @@ body {
   }
 
 /* visi misi */
-.container {
+.container1 {
     width: 80%;
     margin: auto;
     overflow: hidden;
@@ -261,7 +318,6 @@ body {
 .download {
     padding: 2rem 1rem;
     text-align: center;
-    background-color: #101820;
 }
 
 .download h2 {
@@ -288,7 +344,8 @@ body {
 /* Slider Section */
 .slider {
     position: relative;
-    margin: 2rem 0;
+    background-color: #222a33;
+    padding: 1.1rem;
 }
 
 .slider h2 {
@@ -308,6 +365,7 @@ body {
     margin: 0 auto 1rem;
     background-color: #cb5500;
     border-radius: 10px;
+
 }
 
 .slide h3 {
@@ -355,11 +413,12 @@ body {
 /* Join Section */
 .join {
     padding: 2rem 1rem;
+
 }
 
 .join h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
 }
 
@@ -391,14 +450,51 @@ body {
     font-size: 0.9rem;
 }
 
+/* Base Section Styles */
+.join,
+.about1,
+.slider,
+.stats {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Different Background Colors */
+.join { background-color: #421a00; }  /* Green */
+.about1 { background-color: #6e2e00; } /* Blue */
+.slider { background-color: #973f00; } /* Red */
+.stats { background-color: #e66000; }  /* Yellow */
+
+/* Rounded Corners on Top (except first section) */  
+.about1,
+.slider,
+.stats {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: -50px; /* Pull the section up */
+    z-index: 1;
+}
+
+
+.join {
+    z-index: 1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+
 /* Stats Section */
 .stats {
+    justify-items: center;
     padding: 2rem 1rem;
     text-align: center;
 }
 
 .stat-image {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 70%;
     height: 200px;
     margin-bottom: 1rem;
     background-color: #f0f0f0;
@@ -413,19 +509,15 @@ body {
 
    /* footer Section */
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
 .footer {
+    display: grid;
     background-color: #101820;
     padding: 3rem 0;
+    justify-content: center;
 }
 
 .footer-top {
-    display: grid;
+
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
@@ -488,6 +580,7 @@ body {
 .footer-bottom {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .footer-nav {
@@ -568,9 +661,9 @@ body {
 
 @media (min-width: 1024px) {
     .container {
-        max-width: 1200px;
+        max-width: 100%;
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0 auto ;
     }
     .hero {
         display: flex;
