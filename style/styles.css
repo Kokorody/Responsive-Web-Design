@@ -632,6 +632,8 @@ body::before {
         grid-template-columns: repeat(6, 1fr);
     }
 
+    .about
+
     .store-buttons {
         justify-content: center;
     }
