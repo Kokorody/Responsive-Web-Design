@@ -54,7 +54,7 @@ body::before {
     display: flex;
     align-items: center; 
     gap: 10px;
-    margin-left: 5rem;
+    margin-left: 7rem;
 }
 
 .logo-text {
