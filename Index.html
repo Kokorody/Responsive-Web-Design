@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMK</title>
     <link rel="stylesheet" href="style/styles.css">
+    <script src="script/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,27 +13,19 @@
         <!-- Header -->
         <header class="header">
             <div class="logo">
-                <img src="assets/Logo_main.png" alt="logo omk" height="60px" style="border-radius: 30px;"> 
+                <img src="assets/Logo_main.png" alt="logo omk" height="60px" style="border-radius: 30px;">
                 <span class="logo-text">OMK</span>
             </div>            
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="navMenu">
                 <ul>    
-                    <li><a href="home">Home</a></li>
-                    <!-- <li class="dropdown">
-                        <a href="#">Partner with us <span class="dropdown-arrow">▼</span></a>
-                    </li> -->
+                    <li><a href="Index.html">Home</a></li>
                     <li><a href="about">About</a></li>
-                    <!-- include about us, visi misi, why choose us -->
                     <li><a href="#">Features</a></li>
-                    <!-- <li class="dropdown">
-                        <a href="#">Company <span class="dropdown-arrow">▼</span></a>
-                    </li> -->
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="Index_faq.html">FAQ</a></li>
                     <li><a href="#">Contact</a></li>
-                    <!-- <li><a href="#">Help</a></li> -->
                 </ul>
             </nav>
-            <div class="menu-icon">&#9776;</div>
+            <div class="menu-icon" id="menuToggle">&#9776;</div>
         </header>
 
         <!-- Hero Section with Product Grid -->
@@ -48,48 +41,8 @@
                 <h1>Jek-OMK: Solusi Transportasi Praktis di UI!</h1>
                 <h2 id="about-h2">Mau ke kelas tepat waktu tanpa ribet? Jek-OMK hadir untuk membantu mobilitasmu di dalam kampus UI dengan cepat, aman, dan nyaman! Pesan ojek kampus hanya dengan beberapa klik, lacak driver secara real-time, dan pilih metode pembayaran sesuai kebutuhanmu.
                 </h2>
-                <h2 id="about-h2">Lebih Cepat, Lebih Mudah, Lebih Nyaman!</h2>
+                <h1 id="about">Lebih Cepat, Mudah, Dan Nyaman!</h2>
             </div>
-
-            <div class="container1  ">
-                <div class="pricing-table">
-                    <div class="pricing-option free">
-                        <h2>Visi</h2>
-                        <p>Menjadi solusi transportasi kampus yang aman, efisien, 
-                            dan ramah lingkungan bagi seluruh civitas akademika UI.</p>
-                    </div>
-                    <div class="pricing-option plus">
-                        <h2>Misi</h2>
-                        <ul>
-                            <li>Memberikan layanan transportasi yang mudah diakses dan terjangkau</li>
-                            <li>Menyediakan sistem pemesanan yang cepat dan akurat</li>
-                            <li>Meningkatkan keselamatan dan kenyamanan pengguna</li>
-                            <li>Mendukung mobilitas kampus yang lebih ramah lingkungan</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                    <div class="pricing-option plus">
-                        <h2>Frequent Asked Question</h2>
-                        <h3>Masih Bingung? Cek Jawaban di Sini!</h3>
-                        <ul>
-                            <li>❓ Siapa saja yang bisa pakai Jek-OMK?<br>
-                                💡 Jek-OMK bisa digunakan oleh mahasiswa, dosen, dan staf UI.</li>
-                            <li>❓ Bagaimana cara membayar Jek-OMK?<br>
-                                💡 Kamu bisa membayar pakai GoPay atau tunai langsung</li>
-                            <li>❓ Bagaimana jika saya lupa barang di ojek?<br>
-                                💡 Hubungi customer service Jek-OMK atau gunakan fitur "Lapor Barang Hilang" di aplikasi.</li>
-                            <li>❓ Apakah tarifnya tetap atau berubah?<br>
-                                💡 Tarif sudah dihitung otomatis berdasarkan jarak perjalananmu.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Why Choose Us -->
         <section class="join">
@@ -138,164 +91,6 @@
             <img src="assets/appsnapshot.jpg" alt="appsnapshot">
         </div>
 
-        <!-- Why Choose Us -->
-        <!-- <section class="join">
-            <h2>Frequent Ask Question</h2>
-            
-            <div class="join-options">
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h4>Siapa saja yang bisa pakai Jek-OMK?</h4>
-                        <p>Jek-OMK bisa digunakan oleh siapapun yang mengunduh aplikasi Jek.</p>
-                    </div>
-                </div>
-                
-            <div class="join-options">
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h4>Bagaimana cara membayar Jek-OMK?</h4>
-                        <p>Kamu bisa membayar pakai GoPay atau tunai langsung ke driver.</p>
-                    </div>
-                </div>
-                
-            <div class="join-options">
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h4>Bagaimana jika saya lupa barang di ojek?</h4>
-                        <p> Hubungi customer service Jek-OMK atau gunakan fitur "Lapor Barang Hilang" di aplikasi.</p>
-                    </div>
-                </div>
-                
-            <div class="join-options">
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h4>Apakah tarifnya tetap atau berubah?</h4>
-                        <p>💡 Tarif sudah dihitung otomatis berdasarkan jarak perjalananmu.</p>
-                    </div>
-                </div>
-        </section> -->
-               
-        
-        <!-- End Of Content -->
-        <!-- Services Grid -->
-
-        
-        <!-- <div class="services">
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoPulsa</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoShuttle</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoTagihan</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoSure</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoCar</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoRide</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoFood</p>
-            </div>
-            <div class="service">
-                <div class="service-icon">G</div>
-                <p>GoShop</p>
-            </div>
-        </div> -->
-
-
-        <!-- Products Section -->
-
-        <!-- <div class="products">
-            <div class="product-list">
-                <div class="product-item">
-                    <div class="product-icon"></div>
-                    <span>gobox</span>
-                </div>
-                <div class="product-item">
-                    <div class="product-icon"></div>
-                    <span>goride</span>
-                </div>
-                <div class="product-item">
-                    <div class="product-icon"></div>
-                    <span>gobluebird</span>
-                </div>
-                <div class="product-item">
-                    <div class="product-icon"></div>
-                    <span>gosend</span>
-                </div>
-                <div class="product-item">
-                    <div class="product-icon"></div>
-                    <span>gocar</span>
-                </div>
-            </div>
-            <div class="category">
-                <h3 class="category-title">Transport & Logistics</h3>
-                <p class="category-description">We've kinda done 13,000 trips between the earth and the moon.</p>
-            </div>
-            <div class="slider-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="text-center">
-                <a href="#" class="button">View all products</a>
-            </div>
-        </div> -->
-
-        <!-- ini bisa jadi why choose us -->
-        <!-- Join Section -->
-        <!-- <section class="join">
-            <h2>Join the ride</h2>
-            
-            <div class="join-options">
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h3>Employees</h3>
-                        <p>Behind Southeast Asia's only hyper-growth startup are some billion-dollar brains, doing what they do best.</p>
-                        <a href="#" class="button">Join as employee</a>
-                    </div>
-                </div>
-                
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h3>Driver partners</h3>
-                        <p>We're home to 2 million+ driver partners, who enjoy a bundle of health and financial benefits.</p>
-                        <a href="#" class="button">Join as a driver partner</a>
-                    </div>
-                </div>
-                
-                <div class="join-option">
-                    <div class="option-icon"></div>
-                    <div class="option-content">
-                        <h3>Merchants</h3>
-                        <p>We empower 500,000+ merchants with cutting-edge technologies that help them multiply reach and sales.</p>
-                        <a href="#" class="button">Join as a merchant</a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <!-- Slider Section -->
         <section class="slider">
             <h2>Benefits</h2>
@@ -309,23 +104,6 @@
                 </div>
                 <h3>Fortune's favorite</h3>
                 <p>Membantu para ojek...</p>
-            </div>
-            
-            <div class="slider-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            
-            <!-- <h2 style="text-align: center; margin: 2rem 0;">We scale like a dream</h2>
-            <div class="text-center">
-                <a href="#" class="button">Scale with us</a>
-            </div> -->
-            
-            <div class="slider-nav">
-                <div class="nav-button">&lt;</div>
-                <div class="nav-button">&gt;</div>
             </div>
         </section>
 
