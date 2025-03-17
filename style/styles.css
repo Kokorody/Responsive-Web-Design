@@ -632,7 +632,7 @@ body::before {
         grid-template-columns: repeat(6, 1fr);
     }
 
-    .about
+
 
     .store-buttons {
         justify-content: center;
@@ -674,6 +674,7 @@ body::before {
         justify-content: space-between;
         text-align: left;
     }
+
 
     .nav-menu {
         display: block; /* Show navigation on desktop */
