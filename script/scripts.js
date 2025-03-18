@@ -6,23 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         
-        // Change hamburger icon to X when menu is open
         if (navMenu.classList.contains('active')) {
-            menuToggle.innerHTML = '&times;'; // × symbol
-            
-            // Reset animations when opening menu
+            menuToggle.innerHTML = '&times;';
             const menuItems = navMenu.querySelectorAll('li');
             menuItems.forEach(item => {
                 item.style.animation = 'none';
-                item.offsetHeight; // Trigger reflow
+                item.offsetHeight;
                 item.style.animation = null;
             });
         } else {
-            menuToggle.innerHTML = '&#9776;'; // ☰ symbol
+            menuToggle.innerHTML = '&#9776;';
         }
     });
     
-    // Close menu when clicking anywhere in the menu (for mobile)
     const menuLinks = navMenu.querySelectorAll('a');
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -32,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Close menu when resizing to desktop
+
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 1024) {
             navMenu.classList.remove('active');
@@ -41,57 +36,81 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add event listener for the close button hover effect
     menuToggle.addEventListener('mouseover', function() {
         if (navMenu.classList.contains('active')) {
             menuToggle.style.transform = 'rotate(90deg)';
         }
     });
-    
+
     menuToggle.addEventListener('mouseout', function() {
         menuToggle.style.transform = 'rotate(0)';
     });
-    
-    // NEW CODE: Image Slideshow functionality
-    let slideIndex = 1;
-    showSlides(slideIndex);
 
-    // Expose these functions to the global scope for onclick handlers
-    window.plusSlides = function(n) {
-        showSlides(slideIndex += n);
+    // Image Slideshow functionality
+    let slideIndex = 0;
+    let slides = document.querySelectorAll(".slide");
+    let totalSlides = slides.length; 
+    const slidesWrapper = document.querySelector(".slides-wrapper");
+    let isSwiping = false;
+    let startX = 0;
+
+    // Function to move slides
+    window.moveSlide = function (step) {
+        let isMobile = window.innerWidth <= 767;
+        slideIndex += step;
+
+        if (slideIndex >= totalSlides) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = totalSlides - 1;
+
+        updateSlidePosition();
+        updateDots();
     };
 
-    window.currentSlide = function(n) {
-        showSlides(slideIndex = n);
-    };
-
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("slide");
-        let dots = document.getElementsByClassName("dot");
-        
-        // If no slides are found, exit the function
-        if (!slides.length) return;
-        
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        
-        // Hide all slides
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        
-        // Remove active class from all dots
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        
-        // Show the current slide and activate corresponding dot
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+    // Function to update slide position
+    function updateSlidePosition() {
+        let isMobile = window.innerWidth <= 767;
+        let translateValue = isMobile ? slideIndex * 100 : slideIndex * 50;
+        slidesWrapper.style.transform = `translateX(-${translateValue}%)`;
     }
-    
-    // // Optional: Auto slideshow
-    // setInterval(function() {
-    //     plusSlides(1);
-    // }, 5000); // Change image every 5 seconds
+
+    // Function to update dots
+    function updateDots() {
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index === slideIndex);
+        });
+    }
+
+    // Function to jump to a specific slide
+    window.currentSlide = function (index) {
+        slideIndex = index;
+        updateSlidePosition();
+        updateDots();
+    };
+
+    // Handle touch events for mobile swipe
+    slidesWrapper.addEventListener("touchstart", (e) => {
+        isSwiping = true;
+        startX = e.touches[0].clientX;
+    });
+
+    slidesWrapper.addEventListener("touchmove", (e) => {
+        if (!isSwiping) return;
+        let moveX = e.touches[0].clientX - startX;
+        if (moveX > 50) {
+            moveSlide(-1);
+            isSwiping = false;
+        } else if (moveX < -50) {
+            moveSlide(1);
+            isSwiping = false;
+        }
+    });
+
+    slidesWrapper.addEventListener("touchend", () => {
+        isSwiping = false;
+    });
+
+    // ✅ Fix: Update slide position when window resizes
+    window.addEventListener("resize", updateSlidePosition);
+
+
 });

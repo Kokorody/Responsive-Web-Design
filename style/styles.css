@@ -300,40 +300,45 @@ body::before {
 
     /* Main features */
     .slideshow-container {
-        max-width: 1000px; /* Increased max-width */
-        width: 95%; /* Slightly wider on all screens */
-        position: relative;
+        max-width: 1000px;
+        width: 95%;
         margin: auto;
         overflow: hidden;
-        border-radius: 2rem;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow */
-        aspect-ratio: auto; /* Let the aspect ratio be automatically adjusted */
+        position: relative;
+    }
+
+    .slides-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 20px;
     }
     
     .slide {
-        display: none;
+        flex: 0 0 calc(50% - 10px); /* Show two slides */
         position: relative;
-        width: 100%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center everything */
     }
     
     .slide img {
-        width: auto;
-        height: 35rem; 
-        object-fit: cover; /* Keep the cover behavior */
-        object-position: center; /* Ensures image is centered */
+        width: 50%;
         border-radius: 2rem;
-        background-color: #f5f5f5;
+        object-fit: contain; /* Prevents cropping */
     }
     
     .slide-content {
         position: absolute;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.6);
         color: white;
         width: 100%;
-        padding: 15px; /* Reduced padding */
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
+        padding: 15px;
+        text-align: center;
+        border-radius: 2rem;
     }
     
     .slide-content h3 {
@@ -349,63 +354,51 @@ body::before {
 
     /* Next & previous buttons */
     .prev, .next {
-        cursor: pointer;
         position: absolute;
         top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 12px; /* Smaller padding */
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
-        font-weight: bold;
-        font-size: 16px; /* Smaller font */
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-      
-    /* Position the arrows outside the image area */
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 30%;
+        font-size: 1.2rem;
+        z-index: 10; /* Ensure they stay on top */
+    }
+    
+    /* Adjust position closer to the images */
     .prev {
-        left: 10px;
+        left: 200px; /* Move closer to content */
     }
     
     .next {
-        right: 10px;
+        right: 200px;
     }
+
     
     /* On hover, add a darker background */
     .prev:hover, .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
     
-    .slide-content {
-        position: absolute;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
-        width: 100%;
-        padding: 15px;
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-        text-align: center;
-    }
-    
     /* Make dots more visible */
     .dots-container {
         text-align: center;
-        padding: 15px 0;
+        margin-top: 10px;
     }
     
     .dot {
-        cursor: pointer;
-        height: 12px;
         width: 12px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
+        height: 12px;
+        background: #bbb;
         display: inline-block;
-        transition: background-color 0.6s ease;
-        border: 1px solid rgba(0,0,0,0.1); /* Add subtle border */
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .active {
+        background: #ff6600;
     }
     
     .active, .dot:hover {
@@ -861,6 +854,10 @@ body::before {
         grid-template-columns: repeat(6, 1fr);
     }
 
+    .slide {
+        flex: 0 0 calc(50% - 10px); /* Two slides per view */
+    }
+
     .store-buttons {
         justify-content: center;
     }
@@ -894,15 +891,21 @@ body::before {
         display: none;
     }
 
+    .slide {
+        flex: 0 0 100%; /* Each slide takes full width */
+    }
+
     .slideshow-container {
-        width: 98%; /* Even wider on mobile */
-        aspect-ratio: 3/4; /* Taller aspect ratio on mobile */
-        margin-bottom: 20px; /* Add some space below */
+        height: auto; /* Prevents forced cropping */
+        max-height: 90vh;
     }
      
     .slide img {
-        object-fit: contain; /* Switch to contain on very small screens */
-        background-color: #ffffff; /* Lighter background */
+        object-fit: contain; /* Ensure the full image is shown */
+        width: 100%;
+        height: auto;
+        max-height: 80vh; /* Prevents oversized images */
+        background-color: white; /* Keeps a clean look */
     }
      
     .slide-content {
@@ -924,6 +927,13 @@ body::before {
         padding: 15px;
         font-size: 18px;
         background-color: rgba(0, 0, 0, 0.5);
+    }
+    .prev {
+        left: 10px; /* Bring closer to the slides */
+    }
+    
+    .next {
+        right: 10px;
     }
 }
 

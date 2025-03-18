@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMK</title>
     <link rel="stylesheet" href="style/styles.css">
-    <script src="script/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -86,39 +85,50 @@
         <!-- Main Features -->
         <div class="about1">
             <h1>Main Features</h1>
-            
+        
             <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="assets/image1.png" alt="Realtime Tracking">
-                    <div class="slide-content">
-                        <h3>Realtime Tracking</h3>
-                        <p>Track your delivery in real-time with our advanced GPS system.</p>
+                <div class="slides-wrapper">
+                    <div class="slide">
+                        <img src="assets/image1.png" alt="Realtime Tracking">
+                        <div class="slide-content">
+                            <h3>Realtime Tracking</h3>
+                            <p>Track your delivery in real-time with our advanced GPS system.</p>
+                        </div>
+                    </div>
+        
+                    <div class="slide">
+                        <img src="assets/image2.png" alt="Easy Payments">
+                        <div class="slide-content">
+                            <h3>Easy Payments</h3>
+                            <p>Multiple payment options available for your convenience.</p>
+                        </div>
+                    </div>
+        
+                    <div class="slide">
+                        <img src="assets/image3.png" alt="comm">
+                        <div class="slide-content">
+                            <h3>Easy Communication</h3>
+                            <p>Our app is enables users to Contact driver to ensure ride safely.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/image4.png" alt="comm">
+                        <div class="slide-content">
+                            <h3>Need Help?</h3>
+                            <p>Our customer service team is always ready to help you!</p>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="slide fade">
-                    <img src="assets/image2.png" alt="Easy Payments">
-                    <div class="slide-content">
-                        <h3>Easy Payments</h3>
-                        <p>Multiple payment options available for your convenience.</p>
-                    </div>
-                </div>
-        
-                <div class="slide fade">
-                    <img src="assets/image3.png" alt="24/7 Support">
-                    <div class="slide-content">
-                        <h3>Easy Communication</h3>
-                        <p>Our customer service team is always ready to help you.</p>
-                    </div>
-                </div>
-        
-                <!-- Navigation arrows -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         
-            <!-- Dots/circles -->
+            <!-- Navigation buttons -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        
+            <!-- Dots for manual navigation -->
             <div class="dots-container">
+                <span class="dot" onclick="currentSlide(0)"></span>
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
@@ -282,4 +292,5 @@
         </footer>
     </div>
 </body>
+<script src="script/scripts.js"></script>
 </html>
