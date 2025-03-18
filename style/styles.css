@@ -337,6 +337,13 @@ body::before {
         align-items: center; /* Center everything */
         margin: 5px; /* Add margin to prevent cutting off */
     }
+
+    .slide h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: white;
+    }
     
     
     .slide img {
@@ -484,7 +491,6 @@ body::before {
   .pricing-option h3 {
     font-family: "Poppins", sans-serif;
     text-align: center;
-    /* color: #ff6a00; */
   }
 
   .pricing-option p {
@@ -694,75 +700,131 @@ body::before {
     cursor: pointer;
 }
 
-/* Slider Section
-.slider {
-    position: relative;
-    background-color: #222a33;
-    padding: 1.1rem;
-}
+    /* Benefits Slider Section */
+    .slider {
+        position: relative;
+        background-color: #973f00;
+        padding: 4rem 2rem;
+        text-align: center;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        margin-top: -50px;
+        z-index: 1;
+        overflow: hidden;
+    }
 
-.slider h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
+    .slider h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: white;
+    }
 
-.slide {
-    text-align: center;
-    padding: 1rem;
-}
+    .benefits-container {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
 
-.slide-image {
-    width: 200px;
-    height: 150px;
-    margin: 0 auto 1rem;
-    background-color: #cb5500;
-    border-radius: 10px;
+    .benefits-wrapper {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
 
-}
+    .benefit-slide {
+        min-width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        color: white;
+    }
 
-.slide h3 {
-    margin-bottom: 0.5rem;
-}
+    .benefit-image-container {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 30rem;
+        width: 100%;
+    }
 
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-}
+    .benefit-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.65); /* This creates the dimming effect */
+    }
 
-.dot {
-    width: 8px;
-    height: 8px;
-    background-color: #555;
-    border-radius: 50%;
-    margin: 0 0.25rem;
-}
+    .benefit-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+        text-align: left;
+    }
 
-.dot.active {
-    background-color: #cb5500;
-}
+    .benefit-slide h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
 
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    
-}
+    .benefit-slide p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
 
-.nav-button {
-    width: 30px;
-    height: 30px;
-    background-color: #eee;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-} */
+    /* Navigation Buttons */
+    .benefit-prev, .benefit-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.3s;
+    }
+
+    .benefit-prev:hover, .benefit-next:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .benefit-prev {
+        left: 10px;
+    }
+
+    .benefit-next {
+        right: 10px;
+    }
+
+    /* Dots */
+    .benefit-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .benefit-dot {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .benefit-dot.active {
+        background-color: white;
+    }
 
 /* Join Section */
 .join {
@@ -1031,7 +1093,7 @@ body::before {
      
     .slide img {
         object-fit: contain; /* Ensure the full image is shown */
-        width: 100%;
+        width: 90%;
         height: auto;
         max-height: 80vh; /* Prevents oversized images */
         background-color: white; /* Keeps a clean look */
@@ -1064,6 +1126,65 @@ body::before {
     .next {
         right: 10px;
     }
+    
+    
+    .benefit-slide p {
+        font-size: 1rem;
+    }
+
+        .benefit-slide {
+            padding: 1rem;
+        }
+        
+        .benefit-image-container {
+            height: 50rem; /* Allow image to scale naturally */
+            width: auto;
+            max-height: 400px; /* Keep a reasonable max height */
+            border-radius: 8px;
+        }
+        .benefit-content {
+            width: 100%;  /* Fully stretch across the image */
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;  /* Ensure it reaches the right edge */
+            box-sizing: border-box; /* Prevent unwanted padding issues */
+        }
+        
+        .benefit-slide h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-slide p {
+            display: none;
+        }
+        
+        /* Adjust navigation buttons for the benefit slider */
+        .benefit-prev, .benefit-next {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .benefit-prev {
+            left: 10px;
+        }
+        
+        .benefit-next {
+            right: 10px;
+        }
+        
+        /* Adjust dots for mobile */
+        .benefit-dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+        }
 }
 
 
