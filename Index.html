@@ -134,21 +134,68 @@
             </div>
         </div>
 
-        <!-- Slider Section -->
-        <section class="slider">
-            <h2>Benefits</h2>
-            <!-- <div class="slide">
-                <div class="slide-image">
-                    <svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#ff6a00"/>
-                        <path d="M100,30 L160,120 L40,120 Z" fill="#fff"/>
-                        <circle cx="150" cy="40" r="20" fill="#ffcc00"/>
-                    </svg>
+    <!-- Benefits Section -->
+    <section class="slider">
+        <h2>Benefits</h2>
+        
+        <div class="benefits-container">
+            <div class="benefits-wrapper">
+                <!-- Individual benefit slides -->
+                <div class="benefit-slide">
+                    <div class="benefit-image-container">
+                        <img src="assets/Bikun.jpg" alt="Free counselling" class="benefit-image">
+                        <div class="benefit-content">
+                            <h3>Mengurangi Kemacetan di Dalam Kampus</h3>
+                            <p>OMK membantu mengurangi jumlah kendaraan pribadi yang masuk ke area kampus, sehingga lalu lintas di dalam Universitas Indonesia menjadi lebih lancar dan tertib.</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>Fortune's favorite</h3>
-                <p>Membantu para ojek...</p>
-            </div> -->
-        </section>
+                
+                <div class="benefit-slide">
+                    <div class="benefit-image-container">
+                        <img src="assets/Benefit2.jpeg" alt="Free counselling" class="benefit-image">
+                        <div class="benefit-content">
+                            <h3>Mengurangi Emisi Karbon</h3>
+                            <p>Dengan lebih banyak mahasiswa menggunakan layanan transportasi yang sama, jumlah kendaraan yang beroperasi berkurang, sehingga polusi udara di lingkungan kampus juga dapat ditekan.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-slide">
+                    <div class="benefit-image-container">
+                        <img src="assets/Benefit3.png" alt="Free counselling" class="benefit-image">
+                        <div class="benefit-content">
+                            <h3>Mendukung Ekosistem Transportasi Berkelanjutan</h3>
+                            <p>OMK bisa menjadi bagian dari sistem transportasi kampus yang lebih terorganisir, mengurangi ketergantungan pada kendaraan pribadi dan mendorong budaya berbagi transportasi.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-slide">
+                    <div class="benefit-image-container">
+                        <img src="assets/Benefit4.png" alt="Free counselling" class="benefit-image">
+                        <div class="benefit-content">
+                            <h3>Mengurangi Beban Parkir</h3>
+                            <p>Jika lebih banyak mahasiswa memilih OMK dibandingkan membawa kendaraan pribadi, maka kebutuhan lahan parkir di dalam kampus dapat dikurangi, sehingga area kampus bisa dimanfaatkan untuk fasilitas lain yang lebih bermanfaat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation arrows -->
+            <button class="benefit-prev" onclick="moveBenefitSlide(-1)">&#10094;</button>
+            <button class="benefit-next" onclick="moveBenefitSlide(1)">&#10095;</button>
+        </div>
+        
+        <!-- Dots for navigation -->
+        <div class="benefit-dots">
+            <span class="benefit-dot active" onclick="currentBenefitSlide(0)"></span>
+            <span class="benefit-dot" onclick="currentBenefitSlide(1)"></span>
+            <span class="benefit-dot" onclick="currentBenefitSlide(2)"></span>
+            <span class="benefit-dot" onclick="currentBenefitSlide(3)"></span>
+        </div>
+    </section>
+
 
         <!-- Stats Section -->
         <section class="stats">
