@@ -902,7 +902,7 @@ body::before {
      
     .slide img {
         object-fit: contain; /* Ensure the full image is shown */
-        width: 100%;
+        width: 65%;
         height: auto;
         max-height: 80vh; /* Prevents oversized images */
         background-color: white; /* Keeps a clean look */
