@@ -532,8 +532,70 @@ body::before {
     border: 1px solid red;
   }
 
-/* SLIDE SHOW */
+/* FEATURES */
+.features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 1rem;
+}
 
+.features {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.features.reverse {
+    flex-direction: row-reverse;
+}
+
+.features.reverse h3 {
+    text-align: right;
+}
+
+.features.reverse p {
+    text-align: right;
+}
+
+.features img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.features-info {
+    max-width: 600px;
+}
+
+.features h3 {
+    margin-top: 0;
+    font-size: 1,5rem;
+    font-weight: bold;
+    color: #e66000;
+    text-align: left;
+}
+
+.features-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.features-info a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.features-info a:hover {
+    text-decoration: underline;
+}
 
 
 /* Services Grid */
@@ -969,7 +1031,7 @@ body::before {
      
     .slide img {
         object-fit: contain; /* Ensure the full image is shown */
-        width: 65%;
+        width: 100%;
         height: auto;
         max-height: 80vh; /* Prevents oversized images */
         background-color: white; /* Keeps a clean look */
