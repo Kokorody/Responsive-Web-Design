@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Existing menu toggle code
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     
@@ -50,4 +51,47 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('mouseout', function() {
         menuToggle.style.transform = 'rotate(0)';
     });
+    
+    // NEW CODE: Image Slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Expose these functions to the global scope for onclick handlers
+    window.plusSlides = function(n) {
+        showSlides(slideIndex += n);
+    };
+
+    window.currentSlide = function(n) {
+        showSlides(slideIndex = n);
+    };
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        // If no slides are found, exit the function
+        if (!slides.length) return;
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        // Remove active class from all dots
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        // Show the current slide and activate corresponding dot
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    
+    // // Optional: Auto slideshow
+    // setInterval(function() {
+    //     plusSlides(1);
+    // }, 5000); // Change image every 5 seconds
 });

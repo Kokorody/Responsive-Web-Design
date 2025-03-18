@@ -37,11 +37,10 @@
         <section id="about">
             <!-- About OMK -->
             <div class="about">
-                <img src="assets/opang1.jpg" alt="opang1">
+                <img src="assets/opang.png" style="border-radius: 2rem;" alt="opang1">
                 <h1>Jek-OMK: Solusi Transportasi Praktis di UI!</h1>
                 <h2 id="about-h2">Mau ke kelas tepat waktu tanpa ribet? Jek-OMK hadir untuk membantu mobilitasmu di dalam kampus UI dengan cepat, aman, dan nyaman! Pesan ojek kampus hanya dengan beberapa klik, lacak driver secara real-time, dan pilih metode pembayaran sesuai kebutuhanmu.
                 </h2>
-                <h1 id="about">Lebih Cepat, Mudah, Dan Nyaman!</h2>
             </div>
 
         <!-- Why Choose Us -->
@@ -85,16 +84,51 @@
 
 
         <!-- Main Features -->
-
         <div class="about1">
             <h1>Main Features</h1>
-            <img src="assets/appsnapshot.jpg" alt="appsnapshot">
+            
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="assets/image1.png" alt="Realtime Tracking">
+                    <div class="slide-content">
+                        <h3>Realtime Tracking</h3>
+                        <p>Track your delivery in real-time with our advanced GPS system.</p>
+                    </div>
+                </div>
+        
+                <div class="slide fade">
+                    <img src="assets/image2.png" alt="Easy Payments">
+                    <div class="slide-content">
+                        <h3>Easy Payments</h3>
+                        <p>Multiple payment options available for your convenience.</p>
+                    </div>
+                </div>
+        
+                <div class="slide fade">
+                    <img src="assets/image3.png" alt="24/7 Support">
+                    <div class="slide-content">
+                        <h3>Easy Communication</h3>
+                        <p>Our customer service team is always ready to help you.</p>
+                    </div>
+                </div>
+        
+                <!-- Navigation arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        
+            <!-- Dots/circles -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </div>
 
         <!-- Slider Section -->
         <section class="slider">
             <h2>Benefits</h2>
-            <div class="slide">
+            <!-- <div class="slide">
                 <div class="slide-image">
                     <svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                         <rect width="100%" height="100%" fill="#ff6a00"/>
@@ -104,7 +138,7 @@
                 </div>
                 <h3>Fortune's favorite</h3>
                 <p>Membantu para ojek...</p>
-            </div>
+            </div> -->
         </section>
 
         <!-- Stats Section -->
@@ -121,22 +155,6 @@
         </section>
 
         <!-- Vision Section -->
-
-
-        <!-- <section class="slider">
-            <div class="slide">
-                <div class="slide-image">
-                    <svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0a0e14"/>
-                        <circle cx="100" cy="75" r="50" fill="#00aa13" opacity="0.6"/>
-                        <path d="M70,70 L130,70 L100,120 Z" fill="#fff"/>
-                    </svg>
-                </div>
-                <h3>#ThereIsAlwaysAWay - An on-demand app that offers choices of solutions to cater different user's needs</h3>
-                <h2 style="margin: 1.5rem 0;">We're Gojek, the drivers of change</h2>
-                <a href="#" class="button">Explore Careers</a>
-            </div>
-        </section> -->
 
         <!-- Download Section -->
         <section class="download">
@@ -155,15 +173,9 @@
                         <div class="footer-column">
                             <h3>Company</h3>
                             <a href="#" class="footer-link">About</a>
-                            <a href="#" class="footer-link">Products</a>
-                            <a href="#" class="footer-link">Blog</a>
+                            <a href="#" class="footer-link">Features</a>
                         </div>
-                        
-                        <div class="footer-column">
-                            <h3>Join with us</h3>
-                            <a href="#" class="footer-link">Driver Partners</a>
-                            <a href="#" class="footer-link">Merchant Partners</a>
-                        </div>
+                
                         
                         <div class="footer-column">
                             <h3>Careers</h3>
@@ -206,12 +218,7 @@
                             <h3>Download the app</h3>
                             <div class="app-stores">
                                 <a href="#" class="app-store">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.954 11.616L15.911 8.659L6.36 3.291C6.22356 3.20738 6.0643 3.15871 5.9 3.16L12.954 11.616Z" fill="white"/>
-                                        <path d="M16.415 14.389L19.710 12.619C20.0405 12.4385 20.3176 12.1692 20.5054 11.8401C20.6933 11.5111 20.7842 11.1353 20.768 10.755C20.7527 10.3931 20.6379 10.0422 20.4364 9.74221C20.2349 9.44218 19.9552 9.20381 19.629 9.05L16.414 7.611L13.207 10.818L16.415 14.389Z" fill="white"/>
-                                        <path d="M5.7 3.16C5.45213 3.16764 5.21305 3.24385 5.00847 3.37949C4.8039 3.51512 4.64354 3.70488 4.550 3.926C4.45213 4.15366 4.42299 4.402 4.4668 4.64492C4.51062 4.88783 4.62555 5.11438 4.797 5.292L12.425 12.02L15.954 15.549L5.7 3.16Z" fill="white"/>
-                                        <path d="M12.077 12.391L4.798 18.292C4.63449 18.4525 4.51903 18.6552 4.46462 18.8767C4.41021 19.0982 4.41893 19.3295 4.49 19.546C4.58473 19.7597 4.7415 19.9427 4.94032 20.0735C5.13914 20.2043 5.37122 20.2774 5.61 20.284C5.8561 20.2919 6.09923 20.2315 6.313 20.11L16.073 14.862L12.077 12.391Z" fill="white"/>
-                                    </svg>
+                                    <img src="assets/google-play.png" style="width: 1.5rem;"  alt="google-play">
                                 </a>
                                 <a href="#" class="app-store">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -264,7 +271,11 @@
                     </div>
                     
                     <div class="copyright">
-                        <p>© 2023 OMK | OMK is a trademark of PT OMK. Registered in the Directorate General of Intellectual Property of the Republic of Indonesia.</p>
+                        <p>© 2024 OMK | OMK is a trademark of PT OMK. Registered in the Directorate General of Intellectual Property of the Republic of Indonesia.</p>
+                        <div class="logo-footer">
+                            <img src="assets/ui_omk_logo.png" alt="logo omk" height="100px">
+                            <span class="logo-text"></span>
+                        </div>  
                     </div>
                 </div>
             </div>

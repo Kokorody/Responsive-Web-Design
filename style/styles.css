@@ -298,6 +298,131 @@ body::before {
     padding: 0px 200px;
   }
 
+    /* Main features */
+    .slideshow-container {
+        max-width: 1000px; /* Increased max-width */
+        width: 95%; /* Slightly wider on all screens */
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow */
+        aspect-ratio: auto; /* Let the aspect ratio be automatically adjusted */
+    }
+    
+    .slide {
+        display: none;
+        position: relative;
+        width: 100%;
+    }
+    
+    .slide img {
+        width: auto;
+        height: 35rem; 
+        object-fit: cover; /* Keep the cover behavior */
+        object-position: center; /* Ensures image is centered */
+        border-radius: 2rem;
+        background-color: #f5f5f5;
+    }
+    
+    .slide-content {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 100%;
+        padding: 15px; /* Reduced padding */
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+    
+    .slide-content h3 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 1.2rem; /* Control heading size */
+    }
+    
+    .slide-content p {
+        margin: 0;
+        font-size: 0.9rem; /* Control paragraph size */
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 12px; /* Smaller padding */
+        color: white;
+        font-weight: bold;
+        font-size: 16px; /* Smaller font */
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      
+    /* Position the arrows outside the image area */
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    /* On hover, add a darker background */
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .slide-content {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        width: 100%;
+        padding: 15px;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        text-align: center;
+    }
+    
+    /* Make dots more visible */
+    .dots-container {
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        border: 1px solid rgba(0,0,0,0.1); /* Add subtle border */
+    }
+    
+    .active, .dot:hover {
+        background-color: #ff6600; /* Match your site color theme */
+    }
+
+    /* Fading animation */
+    .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+    }
+
 /* visi misi */
 .container1 {
     width: 80%;
@@ -447,7 +572,7 @@ body::before {
     cursor: pointer;
 }
 
-/* Slider Section */
+/* Slider Section
 .slider {
     position: relative;
     background-color: #222a33;
@@ -515,7 +640,7 @@ body::before {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
+} */
 
 /* Join Section */
 .join {
@@ -585,7 +710,7 @@ body::before {
 
 
 .join {
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -767,6 +892,38 @@ body::before {
 @media (max-width: 767px) { 
     #about-h2 {
         display: none;
+    }
+
+    .slideshow-container {
+        width: 98%; /* Even wider on mobile */
+        aspect-ratio: 3/4; /* Taller aspect ratio on mobile */
+        margin-bottom: 20px; /* Add some space below */
+    }
+     
+    .slide img {
+        object-fit: contain; /* Switch to contain on very small screens */
+        background-color: #ffffff; /* Lighter background */
+    }
+     
+    .slide-content {
+        padding: 15px; /* Increased padding */
+    }
+     
+    .slide-content h3 {
+        font-size: 1.2rem; /* Larger font */
+        margin-bottom: 8px;
+    }
+     
+    .slide-content p {
+        font-size: 1rem; /* Increased font size */
+        line-height: 1.4;
+    }
+    
+    /* Make navigation buttons more visible on mobile */
+    .prev, .next {
+        padding: 15px;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
