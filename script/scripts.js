@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.style.transform = 'rotate(0)';
     });
 
-    // Image Slideshow functionality
+    // ==== FEATURES SLIDESHOW ====
+    // Original Feature Slideshow functionality
     let slideIndex = 0;
     let slides = document.querySelectorAll(".slide");
     let totalSlides = slides.length; 
@@ -88,81 +89,187 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Handle touch events for mobile swipe
-    slidesWrapper.addEventListener("touchstart", (e) => {
-        isSwiping = true;
-        startX = e.touches[0].clientX;
-    });
+    if (slidesWrapper) {
+        slidesWrapper.addEventListener("touchstart", (e) => {
+            isSwiping = true;
+            startX = e.touches[0].clientX;
+        });
 
-    slidesWrapper.addEventListener("touchmove", (e) => {
-        if (!isSwiping) return;
-        let moveX = e.touches[0].clientX - startX;
-        if (moveX > 50) {
-            moveSlide(-1);
+        slidesWrapper.addEventListener("touchmove", (e) => {
+            if (!isSwiping) return;
+            let moveX = e.touches[0].clientX - startX;
+            if (moveX > 50) {
+                moveSlide(-1);
+                isSwiping = false;
+            } else if (moveX < -50) {
+                moveSlide(1);
+                isSwiping = false;
+            }
+        });
+
+        slidesWrapper.addEventListener("touchend", () => {
             isSwiping = false;
-        } else if (moveX < -50) {
-            moveSlide(1);
-            isSwiping = false;
+        });
+    }
+
+    // Update slide position when window resizes
+    window.addEventListener("resize", function() {
+        if (slidesWrapper) {
+            updateSlidePosition();
+        }
+        if (benefitsWrapper) {
+            updateBenefitPosition();
         }
     });
 
-    slidesWrapper.addEventListener("touchend", () => {
-        isSwiping = false;
-    });
-
-    // ✅ Fix: Update slide position when window resizes
-    window.addEventListener("resize", updateSlidePosition);
-
-
+    // ==== BENEFITS SLIDESHOW ====
+    // New Benefits slideshow functionality
+    let benefitIndex = 0;
+    const benefitSlides = document.querySelectorAll(".benefit-slide");
+    const totalBenefitSlides = benefitSlides.length;
+    const benefitsWrapper = document.querySelector(".benefits-wrapper");
+    const benefitDots = document.querySelectorAll(".benefit-dot");
+    
+    // Initialize the benefits slideshow if elements exist
+    if (benefitsWrapper) {
+        updateBenefitPosition();
+    }
+    
+    // Function to move benefit slides
+    window.moveBenefitSlide = function(step) {
+        benefitIndex += step;
+        
+        // Loop through slides
+        if (benefitIndex >= totalBenefitSlides) {
+            benefitIndex = 0;
+        }
+        if (benefitIndex < 0) {
+            benefitIndex = totalBenefitSlides - 1;
+        }
+        
+        updateBenefitPosition();
+        updateBenefitDots();
+    };
+    
+    // Function to update benefit slide position
+    function updateBenefitPosition() {
+        benefitsWrapper.style.transform = `translateX(-${benefitIndex * 100}%)`;
+    }
+    
+    // Function to update benefit dots
+    function updateBenefitDots() {
+        document.querySelectorAll(".benefit-dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index === benefitIndex);
+        });
+    }
+    
+    // Function to jump to a specific benefit slide
+    window.currentBenefitSlide = function(index) {
+        benefitIndex = index;
+        updateBenefitPosition();
+        updateBenefitDots();
+    };
+    
+    // Handle touch events for mobile swipe on benefits
+    let isBenefitSwiping = false;
+    let benefitStartX = 0;
+    
+    if (benefitsWrapper) {
+        benefitsWrapper.addEventListener("touchstart", (e) => {
+            isBenefitSwiping = true;
+            benefitStartX = e.touches[0].clientX;
+        });
+        
+        benefitsWrapper.addEventListener("touchmove", (e) => {
+            if (!isBenefitSwiping) return;
+            let moveX = e.touches[0].clientX - benefitStartX;
+            if (moveX > 50) {
+                moveBenefitSlide(-1);
+                isBenefitSwiping = false;
+            } else if (moveX < -50) {
+                moveBenefitSlide(1);
+                isBenefitSwiping = false;
+            }
+        });
+        
+        benefitsWrapper.addEventListener("touchend", () => {
+            isBenefitSwiping = false;
+        });
+        
+        // Auto-advance benefit slides every 5 seconds
+        let benefitInterval = setInterval(() => moveBenefitSlide(1), 5000);
+        
+        // Pause auto-advance when user interacts with benefits slideshow
+        const benefitsContainer = document.querySelector(".benefits-container");
+        
+        if (benefitsContainer) {
+            benefitsContainer.addEventListener("mouseenter", () => {
+                clearInterval(benefitInterval);
+            });
+            
+            benefitsContainer.addEventListener("mouseleave", () => {
+                benefitInterval = setInterval(() => moveBenefitSlide(1), 5000);
+            });
+        }
+    }
 });
 
 // CONTACT US - FORM
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Stop form submit
-        
-        clearErrors();
-        
-        let isValid = true;
-        let errorMessages = [];
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop form submit
+            
+            clearErrors();
+            
+            let isValid = true;
+            let errorMessages = [];
 
-        const name = document.getElementById('Name').value.trim();
-        const email = document.getElementById('Email').value.trim();
-        const message = document.getElementById('Message').value.trim();
+            const name = document.getElementById('Name').value.trim();
+            const email = document.getElementById('Email').value.trim();
+            const message = document.getElementById('Message').value.trim();
 
-        if (name === '') {
-            errorMessages.push('Name is required.');
-            isValid = false;
-        }
+            if (name === '') {
+                errorMessages.push('Name is required.');
+                isValid = false;
+            }
 
-        if (email === '') {
-            errorMessages.push('Email is required.');
-            isValid = false;
-        } else if (!validateEmail(email)) {
-            errorMessages.push('Invalid email format.');
-            isValid = false;
-        }
+            if (email === '') {
+                errorMessages.push('Email is required.');
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                errorMessages.push('Invalid email format.');
+                isValid = false;
+            }
 
-        if (message === '') {
-            errorMessages.push('Message is required.');
-            isValid = false;
-        }
+            if (message === '') {
+                errorMessages.push('Message is required.');
+                isValid = false;
+            }
 
-        if (!isValid) {
-            displayError(errorMessages);
-        } else {
-            document.getElementById('errorMsg').innerHTML = '<span style="color: green;">Pesan berhasil dikirim!</span>';
-            // Optionally reset form:
-            // this.reset();
-        }
-    });
+            if (!isValid) {
+                displayError(errorMessages);
+            } else {
+                document.getElementById('errorMsg').innerHTML = '<span style="color: green;">Pesan berhasil dikirim!</span>';
+                // Optionally reset form:
+                // this.reset();
+            }
+        });
+    }
 
     function displayError(messages) {
         const errorDiv = document.getElementById('errorMsg');
-        errorDiv.innerHTML = messages.map(msg => `<p>${msg}</p>`).join('');
+        if (errorDiv) {
+            errorDiv.innerHTML = messages.map(msg => `<p>${msg}</p>`).join('');
+        }
     }
 
     function clearErrors() {
-        document.getElementById('errorMsg').innerHTML = '';
+        const errorDiv = document.getElementById('errorMsg');
+        if (errorDiv) {
+            errorDiv.innerHTML = '';
+        }
     }
 
     function validateEmail(email) {
@@ -170,4 +277,3 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email.toLowerCase());
     }
 });
-
