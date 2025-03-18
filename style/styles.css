@@ -395,11 +395,11 @@ body::before {
     } */
 
     .prev {
-        left: 5rem; /* Move closer to the content */
+        left: 14rem; /* Move closer to the content */
     }
     
     .next {
-        right: 5rem; /* Move closer to the content */
+        right: 14rem; /* Move closer to the content */
     }
 
     
