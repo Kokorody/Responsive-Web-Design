@@ -54,7 +54,7 @@ body::before {
     display: flex;
     align-items: center; 
     gap: 10px;
-    margin-left: 7rem;
+    margin-left: 1rem;
 }
 
 .logo-text {
@@ -259,7 +259,7 @@ body::before {
     align-items: center;
     flex-direction: column;
     height: 100vh; 
-    padding-top: 70px; 
+    padding-top: 1rem; 
     margin: 0; 
     text-align: center; 
     color: white; 
@@ -271,7 +271,7 @@ body::before {
 
   .about h1 {
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    margin-top: 50px;
+    margin-top: 1rem;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
     font-size: 2.5rem;
   }
@@ -279,7 +279,7 @@ body::before {
   .about h2 {
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-size: 1.5rem;
-    margin-top: 70px;   
+    margin-top: 1rem;   
     /* margin-left: 0px; */
     /* float: center; */
     color: white;
@@ -301,6 +301,8 @@ body::before {
     /* Main features */
     .slideshow-container {
         max-width: 1000px;
+        /* max-width: 620rem; */
+        max-height: 100%;
         width: 95%;
         margin: auto;
         overflow: hidden;
@@ -310,11 +312,22 @@ body::before {
     .slides-wrapper {
         display: flex;
         transition: transform 0.5s ease-in-out;
-        gap: 20px;
+        /* gap: 20px; */
     }
     
+    /* .slide {
+        flex: 0 0 calc(50% - 10px); Show two slides 
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column; Stack image and text
+        align-items: center; Center everything
+    } */
+
     .slide {
-        flex: 0 0 calc(50% - 10px); /* Show two slides */
+        flex: 0 0 calc(50% - 10px); /* Adjust as needed */
         position: relative;
         background-color: white;
         padding: 20px;
@@ -322,15 +335,20 @@ body::before {
         display: flex;
         flex-direction: column; /* Stack image and text */
         align-items: center; /* Center everything */
+        margin: 5px; /* Add margin to prevent cutting off */
     }
+    
     
     .slide img {
         width: 50%;
-        border-radius: 2rem;
+        height: auto;
+        /* border-radius: 2rem; */
         object-fit: contain; /* Prevents cropping */
+
     }
     
     .slide-content {
+        height: 6rem;
         position: absolute;
         bottom: 0;
         background: rgba(0, 0, 0, 0.6);
@@ -368,12 +386,20 @@ body::before {
     }
     
     /* Adjust position closer to the images */
-    .prev {
-        left: 200px; /* Move closer to content */
+    /* .prev {
+        left: 200px; Move closer to content
     }
     
     .next {
         right: 200px;
+    } */
+
+    .prev {
+        left: 5rem; /* Move closer to the content */
+    }
+    
+    .next {
+        right: 5rem; /* Move closer to the content */
     }
 
     
@@ -439,15 +465,31 @@ body::before {
     background-color: #1f2833;
   }
 
+  .pricing-option img{
+    /* max-height: relative; */
+    max-width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
   .pricing-option h2 {
     font-family: "Poppins", sans-serif;
     text-align: center;
     color: #ff6a00;
+    
+  }
+
+  .pricing-option h3 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    /* color: #ff6a00; */
   }
 
   .pricing-option p {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 1rem;
   }
   
   .pricing-option ul {
@@ -467,6 +509,31 @@ body::before {
   .pricing-option ul li:last-child {
     border-bottom: none;
   }
+
+  /* UI-OMK LOGO */
+  .uiomklogo {
+    max-height: 10%;
+    height: auto;
+  }
+
+  /* CONTACT US FORM */
+  .form-group{
+    margin-bottom: 1rem;
+  }
+
+  .form-group input, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .input-error {
+    border: 1px solid red;
+  }
+
+/* SLIDE SHOW */
+
 
 
 /* Services Grid */
