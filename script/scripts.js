@@ -114,3 +114,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
+// CONTACT US - FORM
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop form submit
+        
+        clearErrors();
+        
+        let isValid = true;
+        let errorMessages = [];
+
+        const name = document.getElementById('Name').value.trim();
+        const email = document.getElementById('Email').value.trim();
+        const message = document.getElementById('Message').value.trim();
+
+        if (name === '') {
+            errorMessages.push('Name is required.');
+            isValid = false;
+        }
+
+        if (email === '') {
+            errorMessages.push('Email is required.');
+            isValid = false;
+        } else if (!validateEmail(email)) {
+            errorMessages.push('Invalid email format.');
+            isValid = false;
+        }
+
+        if (message === '') {
+            errorMessages.push('Message is required.');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            displayError(errorMessages);
+        } else {
+            document.getElementById('errorMsg').innerHTML = '<span style="color: green;">Pesan berhasil dikirim!</span>';
+            // Optionally reset form:
+            // this.reset();
+        }
+    });
+
+    function displayError(messages) {
+        const errorDiv = document.getElementById('errorMsg');
+        errorDiv.innerHTML = messages.map(msg => `<p>${msg}</p>`).join('');
+    }
+
+    function clearErrors() {
+        document.getElementById('errorMsg').innerHTML = '';
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email.toLowerCase());
+    }
+});
+
