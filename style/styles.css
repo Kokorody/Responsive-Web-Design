@@ -523,6 +523,21 @@ body::before {
   }
 
   /* CONTACT US FORM */
+  
+    .section2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  .contact {
+    display: flex;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
   .form-group{
     margin-bottom: 1rem;
   }
@@ -532,10 +547,23 @@ body::before {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    align-content: center;
   }
 
   .input-error {
     border: 1px solid red;
+  }
+
+  .submit{
+    background-color: #cb5500;
+    color: white;
+    padding: 0.8rem 5rem;
+    border-radius: 25px;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 auto;
+    align-items: center;
   }
 
 /* FEATURES */
@@ -1081,6 +1109,10 @@ body::before {
     #about-h2 {
         display: none;
     }
+
+    .contact {
+        width: 100%;
+      }
 
     .slide {
         flex: 0 0 100%; /* Each slide takes full width */
