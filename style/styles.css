@@ -880,6 +880,10 @@ body::before {
     margin-right: 1rem;
 }
 
+.option-icon p{
+    font-size: 1.5rem;
+}
+
 .option-content h3 {
     margin-bottom: 0.5rem;
 }
