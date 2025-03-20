@@ -424,6 +424,7 @@ body::before {
     .dots-container {
         text-align: center;
         margin-top: 10px;
+        margin-bottom: 20px;
     }
     
     .dot {
