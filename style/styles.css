@@ -580,6 +580,14 @@ body::before {
     align-items: center;
   }
 
+    hr {
+        height: 2px;
+        border: none;
+        background: #cb5500;
+        margin-bottom: 2rem;
+    }
+
+
 /* FEATURES */
 .features-container {
     display: flex;
