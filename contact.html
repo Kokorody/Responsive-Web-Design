@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMK</title>
+    <title>OMK - About</title>
     <link rel="stylesheet" href="style/styles.css">
+    <script src="script/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,198 +28,82 @@
             <div class="menu-icon" id="menuToggle">&#9776;</div>
         </header>
 
-        <!-- Hero Section with Product Grid -->
-        <section id="home" class="hero">
-            <h1>Cuma <span style="color: #ff6a00;">Rp 10.000</span>, bisa pesan ojek yang <span style="color: #ff6a00;">Cepat</span>, <span style="color: #ff6a00;">Aman</span>, dan <span style="color: #ff6a00;">nyaman</span></h1>
-            <a href="https://www.figma.com/design/m7IZHGyGPSgOtNWLPlBbos/OMK?m=auto&t=wl3Vj22p5blNziUP-6" class="button">Unduh Sekarang!</a>
-        </section>
-        
-        <section id="about">
-            <!-- About OMK -->
-            <div class="about">
-                <h1><span style="color: #ff6a00;">Jek-OMK</span> : Solusi Transportasi Praktis di UI!</h1>
-                <img src="assets/opang.png" style="border-radius: 2rem; margin-top: 0.5rem; margin-bottom: 0.5rem;" alt="opang1">
-                <h2 id="about-h2">Mau ke kelas tepat waktu tanpa ribet? Jek-OMK hadir untuk membantu mobilitasmu di dalam kampus UI dengan cepat, aman, dan nyaman! Pesan ojek kampus hanya dengan beberapa klik, lacak driver secara real-time, dan pilih metode pembayaran sesuai kebutuhanmu.
-                </h2>
-            </div>
-
-        <!-- Why Choose Us -->
-        <section class="join">
-            <h2>Why Choose Us?</h2>
-            
-            <div class="join-options">
-                <div class="join-option">
-                    <div class="option-icon">
-                        <p>💰</p>
-                    </div>
-                    <div class="option-content">
-                        <h3>Terjangkau</h3>
-                        <p>Flat 10K, Harga sesuai kantong mahasiswa.</p>
-                    </div>
-                </div>
-                
-                <div class="join-option">
-                    <div class="option-icon">
-                        <p>⏩</p>
-                    </div>         
-                    <div class="option-content">
-                        <h3>Cepat & Praktis</h3>
-                        <p>Nggak perlu antre atau buang waktu.</p>
-                    </div>
-                </div>
-                
-                <div class="join-option">
-                    <div class="option-icon">
-                        <p>🔒</p>
-                    </div>
-                    <div class="option-content">
-                        <h3>Aman & Terpercaya</h3>
-                        <p>Mitra driver resmi di dalam lingkungan UI.</p>
-                    </div>
-                </div>
-
-                <div class="join-option">
-                    <div class="option-icon">
-                        <p>🍀</p>
-                    </div>
-                    <div class="option-content">
-                        <h3>Ramah Lingkungan</h3>
-                        <p>Mengurangi kemacetan & polusi di kampus.</p>
+        <section class="section2">
+            <div class="contact" >
+                    <div class="pricing-option">
+                        <h2>Contact Us</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input type="text" id="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="email" id="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="Message">Message</label>
+                                <textarea id="Message"></textarea>
+                            </div>
+                            <button class="submit" type="submit">Kirim</button>
+                        </form>  
+                        <div id="errorMsg" style="color: red;"></div> <!-- Div for displaying error messages -->
+                        <br>
+                        <h2>Ojek Mitra Kampus</h2>
+                        <h3>Unit Pelaksana Teknis Pengaman Lingkungan Kampus UI</h3>
+                        <ul>
+                            <li><b>📍 Alamat:</b><br>
+                                Gedung Merah  <br>
+                                Kampus UI Depok, 16424</li>
+                            <li><b>📞 Telp:</b> <br> 
+                                (021) 7875602 ext.3</li>
+                            <li><b>📧 Email: </b> <br>
+                                contact@omk.ui.ac.id</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Main Features -->
-        <div class="about1">
-            <h1>Main Features</h1>
-            <div class="slideshow-container">
-                <div class="slides-wrapper">
-                    <div class="slide">
-                        <img src="assets/image1.png" alt="Realtime Tracking">
-                        <div class="slide-content">
-                            <h3>Realtime Tracking</h3>
-                            <p>Track your delivery in real-time with our advanced GPS system.</p>
-                        </div>
+        <!-- basicly gw ada 2 pilihan tampilan, bisa kita diskuxcikan dlu -->
+        <!-- <section>
+            <div class="container">
+                <div class="pricing-table">
+                    <div class="pricing-option free">
+                        <h2>Ojek Mitra Kampus</h2>
+                        <h3>Unit Pelaksana Teknis Pengaman Lingkungan Kampus UI</h3>
+                        <ul>
+                            <li><b>📍 Alamat:</b><br>
+                                Gedung Merah  <br>
+                                Kampus UI Depok, 16424</li>
+                            <li><b>📞 Telp:</b> <br> 
+                                (021) 7875602 ext.3</li>
+                            <li><b>📧 Email: </b> <br>
+                                contact@omk.ui.ac.id</li>
+                        </ul>
                     </div>
-        
-                    <div class="slide">
-                        <img src="assets/image2.png" alt="Easy Payments">
-                        <div class="slide-content">
-                            <h3>Easy Payments</h3>
-                            <p>Multiple payment options available for your convenience.</p>
-                        </div>
-                    </div>
-        
-                    <div class="slide">
-                        <img src="assets/image3.png" alt="comm">
-                        <div class="slide-content">
-                            <h3>Easy Communication</h3>
-                            <p>Our app is enables users to Contact driver to ensure ride safely.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <img src="assets/image4.png" alt="comm">
-                        <div class="slide-content">
-                            <h3>Need Help?</h3>
-                            <p>Our customer service team is always ready to help you!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Navigation buttons -->
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        
-            <!-- Dots for manual navigation -->
-            <div class="dots-container">
-                <span class="dot" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </div>
-
-    <!-- Benefits Section -->
-    <section class="slider">
-        <h2>Benefits</h2>
-        
-        <div class="benefits-container">
-            <div class="benefits-wrapper">
-                <!-- Individual benefit slides -->
-                <div class="benefit-slide">
-                    <div class="benefit-image-container">
-                        <img src="assets/Bikun.jpg" alt="Free counselling" class="benefit-image">
-                        <div class="benefit-content">
-                            <h3>Mengurangi Kemacetan di Dalam Kampus</h3>
-                            <p>OMK membantu mengurangi jumlah kendaraan pribadi yang masuk ke area kampus, sehingga lalu lintas di dalam Universitas Indonesia menjadi lebih lancar dan tertib.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="benefit-slide">
-                    <div class="benefit-image-container">
-                        <img src="assets/Benefit2.jpeg" alt="Free counselling" class="benefit-image">
-                        <div class="benefit-content">
-                            <h3>Mengurangi Emisi Karbon</h3>
-                            <p>Dengan lebih banyak mahasiswa menggunakan layanan transportasi yang sama, jumlah kendaraan yang beroperasi berkurang, sehingga polusi udara di lingkungan kampus juga dapat ditekan.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="benefit-slide">
-                    <div class="benefit-image-container">
-                        <img src="assets/Benefit3.png" alt="Free counselling" class="benefit-image">
-                        <div class="benefit-content">
-                            <h3>Mendukung Ekosistem Transportasi Berkelanjutan</h3>
-                            <p>OMK bisa menjadi bagian dari sistem transportasi kampus yang lebih terorganisir, mengurangi ketergantungan pada kendaraan pribadi dan mendorong budaya berbagi transportasi.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="benefit-slide">
-                    <div class="benefit-image-container">
-                        <img src="assets/Benefit4.png" alt="Free counselling" class="benefit-image">
-                        <div class="benefit-content">
-                            <h3>Mengurangi Beban Parkir</h3>
-                            <p>Jika lebih banyak mahasiswa memilih OMK dibandingkan membawa kendaraan pribadi, maka kebutuhan lahan parkir di dalam kampus dapat dikurangi, sehingga area kampus bisa dimanfaatkan untuk fasilitas lain yang lebih bermanfaat.</p>
-                        </div>
+                    <div class="pricing-option plus">
+                        <h2>Contact Us</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input type="text" id="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="email" id="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="Message">Message</label>
+                                <textarea id="Message"></textarea>
+                            </div>
+                            <button type="submit">Kirim</button>
+                        </form>  
+                        <div id="errorMsg" style="color: red;"></div> <!-- Div for displaying error messages -->
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation arrows -->
-            <button class="benefit-prev" onclick="moveBenefitSlide(-1)">&#10094;</button>
-            <button class="benefit-next" onclick="moveBenefitSlide(1)">&#10095;</button>
-        </div>
-        
-        <!-- Dots for navigation -->
-        <div class="benefit-dots">
-            <span class="benefit-dot active" onclick="currentBenefitSlide(0)"></span>
-            <span class="benefit-dot" onclick="currentBenefitSlide(1)"></span>
-            <span class="benefit-dot" onclick="currentBenefitSlide(2)"></span>
-            <span class="benefit-dot" onclick="currentBenefitSlide(3)"></span>
-        </div>
-    </section>
-
-
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="stat-image">
-                <svg width="70%" height="100%" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="#ff6a00" rx="20" ry="20"/>
-                    <circle cx="200" cy="100" r="50" fill="#fff" opacity="0.7"/>
-                    <path d="M150,150 C150,120 250,120 250,150" stroke="#fff" stroke-width="10" fill="none"/>
-                </svg>
-            </div>
-            <div class="big-number">Quick</div>
-            <p>Order and Book OMK Ride At Anytime!</p>
         </section>
-
-        <!-- Vision Section -->
 
         <!-- Download Section -->
         <section class="download">
@@ -237,9 +122,15 @@
                         <div class="footer-column">
                             <h3>Company</h3>
                             <a href="#" class="footer-link">About</a>
-                            <a href="#" class="footer-link">Features</a>
+                            <a href="#" class="footer-link">Products</a>
+                            <a href="#" class="footer-link">Blog</a>
                         </div>
-                
+                        
+                        <div class="footer-column">
+                            <h3>Join with us</h3>
+                            <a href="#" class="footer-link">Driver Partners</a>
+                            <a href="#" class="footer-link">Merchant Partners</a>
+                        </div>
                         
                         <div class="footer-column">
                             <h3>Careers</h3>
@@ -282,7 +173,12 @@
                             <h3>Download the app</h3>
                             <div class="app-stores">
                                 <a href="#" class="app-store">
-                                    <img src="assets/google-play.png" style="width: 1.5rem;"  alt="google-play">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.954 11.616L15.911 8.659L6.36 3.291C6.22356 3.20738 6.0643 3.15871 5.9 3.16L12.954 11.616Z" fill="white"/>
+                                        <path d="M16.415 14.389L19.710 12.619C20.0405 12.4385 20.3176 12.1692 20.5054 11.8401C20.6933 11.5111 20.7842 11.1353 20.768 10.755C20.7527 10.3931 20.6379 10.0422 20.4364 9.74221C20.2349 9.44218 19.9552 9.20381 19.629 9.05L16.414 7.611L13.207 10.818L16.415 14.389Z" fill="white"/>
+                                        <path d="M5.7 3.16C5.45213 3.16764 5.21305 3.24385 5.00847 3.37949C4.8039 3.51512 4.64354 3.70488 4.550 3.926C4.45213 4.15366 4.42299 4.402 4.4668 4.64492C4.51062 4.88783 4.62555 5.11438 4.797 5.292L12.425 12.02L15.954 15.549L5.7 3.16Z" fill="white"/>
+                                        <path d="M12.077 12.391L4.798 18.292C4.63449 18.4525 4.51903 18.6552 4.46462 18.8767C4.41021 19.0982 4.41893 19.3295 4.49 19.546C4.58473 19.7597 4.7415 19.9427 4.94032 20.0735C5.13914 20.2043 5.37122 20.2774 5.61 20.284C5.8561 20.2919 6.09923 20.2315 6.313 20.11L16.073 14.862L12.077 12.391Z" fill="white"/>
+                                    </svg>
                                 </a>
                                 <a href="#" class="app-store">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -335,16 +231,11 @@
                     </div>
                     
                     <div class="copyright">
-                        <p>© 2024 OMK | OMK is a trademark of PT OMK. Registered in the Directorate General of Intellectual Property of the Republic of Indonesia.</p>
-                        <div class="logo-footer">
-                            <img src="assets/ui_omk_logo.png" alt="logo omk" height="100px">
-                            <span class="logo-text"></span>
-                        </div>  
+                        <p>© 2023 OMK | OMK is a trademark of PT OMK. Registered in the Directorate General of Intellectual Property of the Republic of Indonesia.</p>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 </body>
-<script src="script/scripts.js"></script>
 </html>
