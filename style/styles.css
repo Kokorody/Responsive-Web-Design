@@ -508,7 +508,7 @@ body::before {
   }
 
   .pricing-option p {
-    text-align: center;
+    text-align: justify;
     margin-top: 1rem;
   }
   
@@ -542,6 +542,7 @@ body::before {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 3rem 0;
     }
 
   .contact {
@@ -891,7 +892,7 @@ body::before {
 .join-option {
     margin-bottom: 2rem;
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 
 .option-icon {
@@ -900,14 +901,16 @@ body::before {
     background-color: #cb5500;
     border-radius: 8px;
     margin-right: 1rem;
+    padding: 2rem;
 }
 
 .option-icon p{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .option-content h3 {
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .option-content h4 {
@@ -922,7 +925,7 @@ body::before {
 
 /* FAQ Section Styles */
 .faq-section {
-    padding: 50px 0;
+    padding: 3rem 0;
 }
 
 .faq-container {
@@ -1097,6 +1100,7 @@ body::before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    /*margin: 0rem, 1rem, 0rem, 1rem; */
 }
 
 .footer-column h3 {
@@ -1195,7 +1199,8 @@ body::before {
 }
 
 
-/* Responsive */
+/* Responsive 
+/*Mobile*/
 @media (min-width: 768px) {
     .services {
         grid-template-columns: repeat(6, 1fr);
@@ -1233,6 +1238,7 @@ body::before {
     }
 }
 
+/*Tablet*/
 @media (max-width: 767px) { 
     #about-h2 {
         display: none;
@@ -1359,7 +1365,7 @@ body::before {
         }
 }
 
-
+/*Desktop*/
 @media (min-width: 1024px) {
     .container {
         max-width: 100%;

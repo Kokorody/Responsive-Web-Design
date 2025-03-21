@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==== BENEFITS SLIDESHOW ====
-    // New Benefits slideshow functionality
+    // Benefits slideshow functionality
     let benefitIndex = 0;
     const benefitSlides = document.querySelectorAll(".benefit-slide");
     const totalBenefitSlides = benefitSlides.length;
