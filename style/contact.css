@@ -1,0 +1,57 @@
+  /* CONTACT US FORM */
+  
+  .section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.contact {
+display: flex;
+width: 60%;
+margin: 0;
+padding: 0;
+justify-content: center;
+}
+
+.form-group{
+margin-bottom: 1rem;
+}
+
+.form-group input, textarea{
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+align-content: center;
+}
+
+.input-error {
+border: 1px solid red;
+}
+
+.submit{
+background-color: #cb5500;
+color: white;
+padding: 0.8rem 5rem;
+border-radius: 25px;
+display: block;
+font-weight: bold;
+text-decoration: none;
+margin: 0 auto;
+align-items: center;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background: #cb5500;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+    .contact {
+        width: 100%;
+      }
+}
