@@ -1389,6 +1389,20 @@ body::before {
 /*tablet*/
 @media ((min-width: 768px) and (max-width: 1023px)) {
 
+    .menu-icon {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    .nav-menu {
+        display: block; /* Show navigation on desktop */
+        flex: 1;
+        margin-left: 3rem;
+        position: static;
+        padding-top: 0;
+        height: auto;
+        background-color: transparent;
+    }
+
     .about h2{
         padding: unset;
     }
