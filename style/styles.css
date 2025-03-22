@@ -508,7 +508,7 @@ body::before {
   }
 
   .pricing-option p {
-    text-align: justify;
+    text-align: center;
     margin-top: 1rem;
   }
   
@@ -921,6 +921,11 @@ body::before {
     color: #aaa;
     margin-bottom: 1rem;
     font-size: 0.9rem;
+}
+
+/* Why Choose Us Section */
+.wcs-desc{
+    text-align: left;
 }
 
 /* FAQ Section Styles */
