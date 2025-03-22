@@ -938,107 +938,6 @@ body::before {
     text-align: left;
 }
 
-/* FAQ Section Styles */
-.faq-section {
-    padding: 3rem 0;
-}
-
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px;
-    border: 3px solid #ff6a00;
-    border-radius: 10px;
-    background-color: #1f2833;
-}
-
-.faq-title {
-    color: #ff6a00;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.faq-subtitle {
-    color: #ffffff;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 30px;
-}
-
-.faq-list {
-    margin-bottom: 30px;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 106, 0, 0.3);
-    padding-bottom: 15px;
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-question {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.question-icon {
-    font-size: 1.4rem;
-    margin-right: 10px;
-    color: #ff6a00;
-}
-
-.question-text {
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 1.1rem;
-}
-
-.faq-answer {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 5px;
-}
-
-.answer-icon {
-    font-size: 1.2rem;
-    margin-right: 10px;
-    color: #ffcc00;
-}
-
-.answer-text {
-    color: #d0d0d0;
-    line-height: 1.5;
-}
-
-.faq-contact {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    background-color: rgba(255, 106, 0, 0.1);
-    border-radius: 8px;
-}
-
-.faq-contact h3 {
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-family: "Poppins", sans-serif;
-}
-
-.contact-icon {
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-.faq-contact p {
-    color: #d0d0d0;
-    line-height: 1.5;
-}
-
 
 /* Base Section Styles */
 .join,
@@ -1132,7 +1031,7 @@ body::before {
 
 .footer-link {
     display: block;
-    color: #f0f0f0;
+    color: #9e9e9e;
     margin-bottom: 0.75rem;
     text-decoration: none;
     font-size: 0.95rem;
@@ -1261,7 +1160,6 @@ body::before {
     
     .footer-link {
         font-size: 0.9rem;
-        color: #f0f0f0;
     }
     
     .social-icons {
@@ -1467,14 +1365,17 @@ body::before {
         font-size: 1.5rem;
     }
 
-    .container h2 {
+    /* .container h2 {
         font-size: 1.5rem;
-    }
+    } */
 
     .container h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
+    .download h2{
+        font-size: 1.5rem;
+    }
 
     .hero {
         padding: 8rem 1rem;
@@ -1620,18 +1521,6 @@ body::before {
             width: 10px;
             height: 10px;
             margin: 0 5px;
-        }
-
-        .faq-container {
-            padding: 20px;
-        }
-        
-        .faq-title {
-            font-size: 2rem;
-        }
-        
-        .question-text, .answer-text {
-            font-size: 0.95rem;
         }
 
         .store-button{
