@@ -923,6 +923,11 @@ body::before {
     font-size: 0.9rem;
 }
 
+/* Why Choose Us Section */
+.wcs-desc{
+    text-align: left;
+}
+
 /* FAQ Section Styles */
 .faq-section {
     padding: 3rem 0;
