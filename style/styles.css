@@ -1396,6 +1396,7 @@ body::before {
 
     .slide {
         flex: 0 0 100%; /* Each slide takes full width */
+        margin: unset;
     }
 
     .slideshow-container {
@@ -1409,6 +1410,10 @@ body::before {
         height: auto;
         max-height: 80vh; /* Prevents oversized images */
         background-color: white; /* Keeps a clean look */
+    }
+
+    .slide p{
+        display: none;
     }
      
     /* .slide-content {
