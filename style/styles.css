@@ -1333,7 +1333,7 @@ body::before {
 
     .about{
         justify-content: unset;
-        height: unset;
+        height: 90vh;
         padding-top: 7rem;
         padding-bottom: 8rem;
     }
@@ -1616,7 +1616,7 @@ body::before {
 }
 
 /*small dekstop*/
-@media ((min-width: 1024px) and (max-width: 1400px)) {
+@media ((min-width: 1020px) and (max-width: 1400px)) {
 
     .hero h1{
         text-align: center;
@@ -1625,6 +1625,10 @@ body::before {
     .about2 {
         display: none;
     }
+
+    /* .features-title {
+        margin: unset;
+    } */
 
     
     .join-options{
