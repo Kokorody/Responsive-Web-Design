@@ -1250,6 +1250,10 @@ body::before {
         background-color: transparent;
     }
 
+    .hero{
+        padding: 15rem 1rem;
+    }
+
     #about-h2{
         margin-bottom: 3rem;
     }
@@ -1288,9 +1292,19 @@ body::before {
         height: 3rem;
     }
 
+    .slideshow-container{
+        width: 100%;
+    }
+
     .slide {
         flex: 0 0 calc(50% - 10px); /* Two slides per view */
     }
+
+    .slide img{
+        width: 65%;
+    }
+
+
     .prev {
         left: 10px; /* Bring closer to the slides */
     }
@@ -1400,6 +1414,10 @@ body::before {
     /* .slide-content {
         padding: 15px; 
     } */
+
+    .slider h2{
+        font-size: 1.5rem;
+    }
      
     .slide-content h3 {
         font-size: 1rem; /* Larger font */
@@ -1431,7 +1449,7 @@ body::before {
     }
 
         .benefit-slide {
-            padding: 1rem;
+            padding: 2rem 0rem;
         }
         
         .benefit-image-container {
@@ -1475,11 +1493,11 @@ body::before {
         }
         
         .benefit-prev {
-            left: 10px;
+            left: 1px;
         }
         
         .benefit-next {
-            right: 10px;
+            right: 1px;
         }
         
         /* Adjust dots for mobile */
@@ -1642,6 +1660,24 @@ body::before {
         text-align: center;
     }
 
+    .about {
+        justify-content: unset;
+        padding-top: 2rem;
+    }
+
+    .about h1{
+        font-size: 2rem;
+    }
+
+    .about img{
+        height: 45vh;
+        width: auto;
+    }
+
+    #about-h2{
+        font-size: 1.2rem;
+    }
+
     .about2 {
         display: none;
     }
@@ -1650,9 +1686,12 @@ body::before {
         margin: unset;
     } */
 
+    .join{
+        height: 80vh;
+    }
     
     .join-options{
-        margin: 0px 12rem 5rem;
+        margin: 0px 12rem 2rem;
     }
 
     .prev {
@@ -1661,6 +1700,44 @@ body::before {
     
     .next {
         right: 20px;
+    }
+}
+
+@media ((min-height: 1px) and (max-height: 600px)){
+    .slideshow-container{
+        width: 85%;
+    }
+
+
+    .benefit-image{
+        height: 70vh;
+    }
+
+    .benefit-slide{
+        height: 70%;
+        padding: 0rem 2rem;
+    }
+
+    .benefit-image-container{
+        height: 70%;
+    }
+
+    .benefit-slide h3{
+        font-size: 1.5rem;
+    }
+
+    .benefit-slide p{
+        font-size: 1rem;
+    }
+}
+
+@media ((min-height: 1px) and (max-height: 600px) and (max-width: 567px)){
+    .benefit-slide h3{
+        font-size: 1rem;
+    }
+
+    .benefit-slide{
+        padding: 2rem 0rem;
     }
 }
 
