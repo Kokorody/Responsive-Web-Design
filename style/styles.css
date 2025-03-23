@@ -1440,9 +1440,9 @@ body::before {
             display: none;
         }
 
-        .benefit-slide img {
+        /* .benefit-slide img {
             width: 50vh;
-        }
+        } */
 
         
         /* Adjust navigation buttons for the benefit slider */
