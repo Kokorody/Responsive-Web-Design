@@ -1412,9 +1412,7 @@ body::before {
         background-color: white; /* Keeps a clean look */
     }
 
-    .slide p{
-        display: none;
-    }
+
      
     /* .slide-content {
         padding: 15px; 
@@ -1430,7 +1428,7 @@ body::before {
     }
      
     .slide-content p {
-        font-size: 0.8rem; /* Increased font size */
+        font-size: 0.7rem; /* Increased font size */
         line-height: 1.4;
     }
     
@@ -1629,12 +1627,13 @@ body::before {
     }
 
     .join{
-        height: 75vh;
+        height: 70vh;
     }
 
     .join-options {
         grid-template-columns: repeat(2, 1fr);
     }
+    
 
     .footer-top {
         grid-template-columns: auto 1fr;
@@ -1754,7 +1753,15 @@ body::before {
     }
 
     .join h2{
-        font-size: xx-large;
+        font-size: 6vh;
+    }
+
+    .join-option h3{
+        font-size: 3vh;
+    }
+
+    .join-option p{
+        font-size: 2vh;
     }
 
     .join-options{
