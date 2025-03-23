@@ -1586,7 +1586,7 @@ body::before {
     }
 
     .join{
-        height: 60vh;
+        height: 75vh;
     }
 
     .join-options {
@@ -1628,7 +1628,7 @@ body::before {
 
     
     .join-options{
-        margin: 0 12rem;
+        margin: 0px 12rem 5rem;
     }
 
     .prev {
