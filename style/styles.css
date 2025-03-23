@@ -1250,8 +1250,28 @@ body::before {
         background-color: transparent;
     }
 
+    #about-h2{
+        margin-bottom: 3rem;
+    }
+
+    .about{
+        max-height: 100%;
+        height: 95vh;
+    }
+
+    .about h1{
+        font-size: 1.5rem;
+    }
+
+    .about img{
+        height: 15rem;
+        width: auto;
+    }
+
     .about h2{
-        padding: unset;
+        padding: 0 5rem;
+        font-size: 1.2rem;
+
     }
 
     .abouts, .about3 {
@@ -1333,7 +1353,7 @@ body::before {
 
     .about{
         justify-content: unset;
-        height: 90vh;
+        height: 70%;
         padding-top: 7rem;
         padding-bottom: 8rem;
     }
