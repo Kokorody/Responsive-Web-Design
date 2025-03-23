@@ -213,3 +213,10 @@
         max-width: unset;
     }
 }
+
+@media ((min-height: 1px) and (max-height: 600px) and (max-width: 567px)){
+    .feature img{
+        height: 70vh;
+        width: auto;
+    }
+}
