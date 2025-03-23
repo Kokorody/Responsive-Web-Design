@@ -1514,40 +1514,11 @@ body::before {
 /*phone m*/
 @media (min-width: 370px) and (max-width: 424px) {
     
-    /* .slide {
-        flex: 0 0 90%; 
-    }
-
-    .slideshow-container {
-        height: auto;
-        max-height: 90vh;
-    }
-     
-    .slide img {
-        width: 35vh;
-        height: auto;
-        max-height: 90vh; 
-    } */
 
 }
 
 /*phone l*/
 @media (min-width: 420px) and (max-width: 787px) {
-    /* .slide {
-        flex: 0 0 95%; 
-    }
-
-    .slideshow-container {
-        height: auto;
-        max-height: 95vh;
-    }
-     
-    .slide img {
-        height: 70vh;
-        padding-right: 2.2rem;
-        padding-left: 2rem;
-        max-height: 95vh; 
-    } */
 
 }
 
