@@ -1,13 +1,13 @@
 .about-section {
-    padding: 3rem 0rem;
+    padding: 3vw 0vw; /* cek dan samakan dengan page lainnya */
 }
 
 .about-container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px;
-    border: 3px solid #ff6a00;
-    border-radius: 10px;
+    padding: 2vw;
+    border: 0.3vw solid #ff6a00;
+    border-radius: 1vw; /* cek dan samakan dengan page lainnya */
     background-color: #1f2833;
     text-align: left;
 }
@@ -29,14 +29,14 @@
     color: #ff6a00;
     text-align: center;
     /* font-size: 2rem; */
-    font-size: 4.5vh;
+    font-size: 4vw;
     margin-bottom: 15px;
 }
 
 .about-text {
     text-align: left;
     /* font-size: 1rem; */
-    font-size: 2.5vh;
+    font-size: 1.5vw;
     line-height: 1.6;
     margin-bottom: 10px;
 }
@@ -45,14 +45,14 @@
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
-    font-size: 2.5vh;
+    font-size: 1.5vw;
 }
 
 .about-list li {
     padding: 8px 0;
-    border-bottom: 1px solid #ff6a00;
+    border-bottom: 0.1vw solid #ff6a00;
     list-style: circle;
-    margin-left: 20px;
+    margin-left: 1vw;
 }
 
 .about-list li:last-child {
@@ -60,17 +60,21 @@
 }
 
 hr {
-    height: 0.2vh;
+    height: 0.3vw;
     border: none;
     background: #cb5500;
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
 }
 
 @media (max-width: 760px) {
 
     #text2, #text3 {
         display: none;
+    }
+
+    .about-section{
+        padding: unset;
     }
 
     .about-container {
