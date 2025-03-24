@@ -1,0 +1,120 @@
+/*4k*/
+
+@media ((min-width: 2550px) and (min-height:1000px)) {
+    /* .container h1{
+        font-size: 5vh;
+        text-align: center;
+    } */
+
+    .header {
+        height: 10vh;
+    }
+
+    .logo{
+        margin-left: 7rem;
+    }
+
+    .logo img{
+        width: auto;
+        height: 8vh;
+        border-radius: 50% !important;
+    }
+
+    .logo-text{
+        font-size: 6vh;
+    }
+
+    .header a{
+        font-size: 2vh;
+    }
+
+    .nav-menu ul{
+        margin-right: 7rem;
+    }
+
+    /*footer*/
+
+    .footer a, p {
+        font-size: 2vh;
+    }
+
+    .footer-column h3{
+        font-size: 2.5vh;
+    }
+
+    .footer img{
+        height: 3vh;
+        width: auto !important;
+    }
+
+    .social-icons {
+        gap: 1vw;
+    }
+
+    .social-icons a{
+        width: 4vh;
+        height: 4vh;
+    }
+
+    .footer svg{
+        width: 2vh;
+        height: 2vh;
+    }
+
+    .app-stores{
+        gap: 3rem;
+    }
+
+    .copyright p{
+        font-size: 1.5vh;
+    }
+
+    .copyright img{
+        height: 10vh;
+    }
+    
+    .selectors {
+        display: flex;
+        flex-direction: row;
+        gap: 2vw; /* Increase gap between selectors */
+        margin: 0;
+        align-items: center;
+    }
+    
+    .country-selector, .language-selector {
+        padding: 1vh 2vh;
+        margin-bottom: 0; /* Remove bottom margin */
+        width: auto; /* Allow natural width */
+        min-width: 150px; /* Ensure minimum width */
+    }
+    
+    /* Give more space for the text and icons */
+    .selector-content {
+        font-size: 2vh;
+        justify-content: flex-start; /* Left align content */
+        gap: 1vw; /* Space between elements */
+    }
+    
+    .selector-content span {
+        margin: 0 1vw; /* Add margin around text */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+    
+    /* Space out the bottom content better */
+    .footer-bottom-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2vw; /* Add gap between elements */
+    }
+    
+    /* Make sure the footer nav doesn't crowd the selectors */
+    .footer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+
+    
+}
