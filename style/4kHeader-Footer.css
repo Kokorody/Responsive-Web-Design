@@ -114,6 +114,28 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    /*download section*/
+
+    .download {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .download h2 {
+        font-size: 4vh;
+        margin-bottom: 1.5rem;
+    }
+
+    .store-button {
+        font-size: 2vh;
+        border-radius: 5rem;
+        padding: 2rem;
+    }
+
+    .store-buttons {
+        gap: 2vh;
+    }
     
 
     
