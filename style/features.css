@@ -222,7 +222,7 @@
 }
 
 /*4k*/
-@media (min-width: 2550px ){
+@media ((min-width: 2550px) and (min-height:1000px)){
 
     .features-title{
         font-size: 6rem;
