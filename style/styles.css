@@ -211,740 +211,744 @@ body::before {
     margin-left: 5px;
 }
 
+/*home*/
+
+        /* Hero Section */
+        .hero {
+            padding: 17rem 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #cb5500;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0.5rem;
+        }
+
+
+        .hero h1, .hero .button {
+            position: relative;
+            z-index: 2; /* Ensures text and button appear above overlay */
+        }
+
+
+
+        /* About Us Section */
+        .about {
+            width: 100vw; /* Full width */
+            max-width: 100%; /* Ensure it doesn't exceed the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; 
+            padding-top: 1rem; 
+            margin: 0; 
+            text-align: center; 
+            color: white; 
+            position: relative;
+            overflow: hidden;
+            background-color: #2b1104;
+        }
+
+
+        .about h1 {
+            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+            margin-top: 1rem;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+            font-size: 2.5rem;
+        }
+
+        .about h2 {
+            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+            font-size: 1.5rem;
+            margin-top: 1rem;   
+            /* margin-left: 0px; */
+            /* float: center; */
+            color: white;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+            padding: 0px 10rem;
+        }
+
+        .about h3 {
+            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+            font-size: 1rem;
+            margin-top: 70px;
+            margin-left: 0px;
+            float: center;
+            color: white;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+            padding: 0px 200px;
+        }
+
+            /* Main features */
+
+            .about1 h1{
+                font-size: 2.5rem;
+            }
+
+            .slideshow-container {
+                max-width: 1000px;
+                /* max-width: 620rem; */
+                max-height: 100%;
+                width: 95%;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .slides-wrapper {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                /* gap: 20px; */
+            }
+            
+            /* .slide {
+                flex: 0 0 calc(50% - 10px); Show two slides 
+                position: relative;
+                background-color: white;
+                padding: 20px;
+                border-radius: 2rem;
+                display: flex;
+                flex-direction: column; Stack image and text
+                align-items: center; Center everything
+            } */
+
+            .slide {
+                flex: 0 0 calc(50% - 10px); /* Adjust as needed */
+                position: relative;
+                background-color: white;
+                padding: 20px;
+                border-radius: 2rem;
+                display: flex;
+                flex-direction: column; /* Stack image and text */
+                align-items: center; /* Center everything */
+                margin: 5px; /* Add margin to prevent cutting off */
+            }
+
+            .slide h1 {
+                text-align: center;
+                margin-bottom: 2rem;
+                font-size: 2.5rem;
+                color: white;
+            }
+            
+            
+            .slide img {
+                width: 50%;
+                height: auto;
+                /* border-radius: 2rem; */
+                object-fit: contain; /* Prevents cropping */
+
+            }
+            
+            .slide-content {
+                height: 6rem;
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+                border-radius: 2rem;
+            }
+            
+            .slide-content h3 {
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 1.2rem; /* Control heading size */
+            }
+            
+            .slide-content p {
+                margin: 0;
+                font-size: 0.9rem; /* Control paragraph size */
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                border-radius: 30%;
+                font-size: 1.2rem;
+                z-index: 10; /* Ensure they stay on top */
+            }
+            
+            /* Adjust position closer to the images */
+            /* .prev {
+                left: 200px; Move closer to content
+            }
+            
+            .next {
+                right: 200px;
+            } */
+
+            .prev {
+                left: 14rem; /* Move closer to the content */
+            }
+            
+            .next {
+                right: 14rem; /* Move closer to the content */
+            }
+
+            
+            /* On hover, add a darker background */
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            
+            /* Make dots more visible */
+            .dots-container {
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+            
+            .dot {
+                width: 12px;
+                height: 12px;
+                background: #bbb;
+                display: inline-block;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .active {
+                background: #ff6600;
+            }
+            
+            .active, .dot:hover {
+                background-color: #ff6600; /* Match your site color theme */
+            }
+
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+
+            @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+
+        /* visi misi */
+        .container1 {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .pricing-table {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-option {
+            /* border: 3px solid #ff6a00;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;*/
+            flex: 1 1 calc(33.333% - 20px); 
+            box-sizing: border-box;
+            /* background-color: #1f2833; */
+            /* width: 60%; */
+
+            max-width: 900px;
+            margin: 0 auto ;
+            padding: 30px;
+            border: 3px solid #ff6a00;
+            border-radius: 10px;
+            background-color: #1f2833;
+        }
+
+        .pricing-option img{
+            /* max-height: relative; */
+            max-width: 20%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .pricing-option h2 {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            color: #ff6a00;
+            
+        }
+
+        .pricing-option h3 {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+        }
+
+        .pricing-option p {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .pricing-option ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin: 20px 0 0;
+        }
+        
+        .pricing-option ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ff6a00;
+            list-style: circle;
+            margin-left: 20px;
+        }
+        
+        .pricing-option ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* UI-OMK LOGO */
+        .uiomklogo {
+            max-height: 10%;
+            height: auto;
+        }
+
+
+
+        /* FEATURES */
+        .features-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
+            margin: auto;
+            margin-top: 1rem;
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-top: 1rem;
+        }
+
+        .features.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .features.reverse h3 {
+            text-align: right;
+        }
+
+        .features.reverse p {
+            text-align: right;
+        }
+
+        .features img {
+            width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .features-info {
+            max-width: 600px;
+        }
+
+        .features h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e66000;
+            text-align: left;
+        }
+
+        .features-info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .features-info a {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .features-info a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Services Grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .service {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .service-icon {
+            background-color: #cb5500;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+            font-size: 20px;
+        }
+
+        .service p {
+            font-size: 0.8rem;
+        }
+
+        /* Products Section */
+        .products {
+            background-color: #cb5500;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            margin: 1rem;
+            color: white;
+        }
+
+        .product-list {
+            margin: 1.5rem 0;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .product-icon {
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 0.8rem;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+        }
+
+        .category-description {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .store-button {
+            background-color: white;
+            color: #101820;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            /* Benefits Slider Section */
+            .slider {
+                position: relative;
+                background-color: #973f00;
+                padding: 4rem 2rem;
+                text-align: center;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                margin-top: -50px;
+                z-index: 1;
+                overflow: hidden;
+            }
+
+            .slider h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                color: white;
+            }
+
+            .benefits-container {
+                position: relative;
+                max-width: 1000px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .benefits-wrapper {
+                display: flex;
+                transition: transform 0.5s ease;
+                width: 100%;
+            }
+
+            .benefit-slide {
+                min-width: 100%;
+                padding: 2rem;
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .benefit-image-container {
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                height: 30rem;
+                width: 100%;
+            }
+
+            .benefit-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: brightness(0.65); /* This creates the dimming effect */
+            }
+
+            .benefit-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 2rem;
+                background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+                text-align: left;
+            }
+
+            .benefit-slide h3 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .benefit-slide p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+
+            /* Navigation Buttons */
+            .benefit-prev, .benefit-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(255, 255, 255, 0.3);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                cursor: pointer;
+                z-index: 10;
+                transition: background-color 0.3s;
+            }
+
+            .benefit-prev:hover, .benefit-next:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .benefit-prev {
+                left: 10px;
+            }
+
+            .benefit-next {
+                right: 10px;
+            }
+
+            /* Dots */
+            .benefit-dots {
+                display: flex;
+                justify-content: center;
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .benefit-dot {
+                width: 10px;
+                height: 10px;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                margin: 0 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .benefit-dot.active {
+                background-color: white;
+            }
+
+        /* Join Section */
+        .join {
+            padding: 2rem 1rem;
+            background-color: #412010;
+            color: white;
+        }
+
+        .join h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .join-options {
+            display: grid;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .join-option {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .option-icon {
+            width: 30px;
+            height: 40px;
+            min-width: 60px;
+            background-color: #cb5500;
+            border-radius: 8px;
+            margin-right: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .option-icon p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .option-content h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .option-content p {
+            color: #ccc;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        /* Why Choose Us Section */
+        .wcs-desc{
+            text-align: left;
+        }
+
+
+        /* Base Section Styles */
+        .join,
+        .about1,
+        .slider,
+        .stats {
+            position: relative;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        /* Different Background Colors */
+        .join { background-color: #421a00; }  /* Green */
+        .about1 { background-color: #6e2e00; } /* Blue */
+        .slider { background-color: #973f00; } /* Red */
+        .stats { background-color: #e66000; }  /* Yellow */
+
+        /* Rounded Corners on Top (except first section) */  
+        .about1,
+        .slider,
+        .stats {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-top: -50px; /* Pull the section up */
+            z-index: 1;
+        }
+
+
+        .join {
+            z-index: 1;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: -20px;
+        }
+
+
+        /* Stats Section */
+        .stats {
+            justify-items: center;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .stat-image {
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            height: 200px;
+            margin-bottom: 1rem;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+        }
+
+        .big-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
 
-/* Hero Section */
-.hero {
-    padding: 17rem 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-}
-
-.button {
-    background-color: #cb5500;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    display: inline-block;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 0.5rem;
-}
-
-
-.hero h1, .hero .button {
-    position: relative;
-    z-index: 2; /* Ensures text and button appear above overlay */
-}
-
-
-
-/* About Us Section */
-.about {
-    width: 100vw; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh; 
-    padding-top: 1rem; 
-    margin: 0; 
-    text-align: center; 
-    color: white; 
-    position: relative;
-    overflow: hidden;
-    background-color: #2b1104;
-}
-
-
-  .about h1 {
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    margin-top: 1rem;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
-    font-size: 2.5rem;
-  }
-
-  .about h2 {
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    font-size: 1.5rem;
-    margin-top: 1rem;   
-    /* margin-left: 0px; */
-    /* float: center; */
-    color: white;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
-    padding: 0px 10rem;
-  }
-
-  .about h3 {
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    font-size: 1rem;
-    margin-top: 70px;
-    margin-left: 0px;
-    float: center;
-    color: white;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
-    padding: 0px 200px;
-  }
-
-    /* Main features */
-
-    .about1 h1{
-        font-size: 2.5rem;
-    }
-
-    .slideshow-container {
-        max-width: 1000px;
-        /* max-width: 620rem; */
-        max-height: 100%;
-        width: 95%;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .slides-wrapper {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        /* gap: 20px; */
-    }
-    
-    /* .slide {
-        flex: 0 0 calc(50% - 10px); Show two slides 
-        position: relative;
-        background-color: white;
-        padding: 20px;
-        border-radius: 2rem;
-        display: flex;
-        flex-direction: column; Stack image and text
-        align-items: center; Center everything
-    } */
-
-    .slide {
-        flex: 0 0 calc(50% - 10px); /* Adjust as needed */
-        position: relative;
-        background-color: white;
-        padding: 20px;
-        border-radius: 2rem;
-        display: flex;
-        flex-direction: column; /* Stack image and text */
-        align-items: center; /* Center everything */
-        margin: 5px; /* Add margin to prevent cutting off */
-    }
-
-    .slide h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        color: white;
-    }
-    
-    
-    .slide img {
-        width: 50%;
-        height: auto;
-        /* border-radius: 2rem; */
-        object-fit: contain; /* Prevents cropping */
-
-    }
-    
-    .slide-content {
-        height: 6rem;
-        position: absolute;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        border-radius: 2rem;
-    }
-    
-    .slide-content h3 {
-        margin-top: 0;
-        margin-bottom: 5px;
-        font-size: 1.2rem; /* Control heading size */
-    }
-    
-    .slide-content p {
-        margin: 0;
-        font-size: 0.9rem; /* Control paragraph size */
-    }
-
-    /* Next & previous buttons */
-    .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 30%;
-        font-size: 1.2rem;
-        z-index: 10; /* Ensure they stay on top */
-    }
-    
-    /* Adjust position closer to the images */
-    /* .prev {
-        left: 200px; Move closer to content
-    }
-    
-    .next {
-        right: 200px;
-    } */
-
-    .prev {
-        left: 14rem; /* Move closer to the content */
-    }
-    
-    .next {
-        right: 14rem; /* Move closer to the content */
-    }
-
-    
-    /* On hover, add a darker background */
-    .prev:hover, .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    /* Make dots more visible */
-    .dots-container {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 30px;
-    }
-    
-    .dot {
-        width: 12px;
-        height: 12px;
-        background: #bbb;
-        display: inline-block;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .active {
-        background: #ff6600;
-    }
-    
-    .active, .dot:hover {
-        background-color: #ff6600; /* Match your site color theme */
-    }
-
-    /* Fading animation */
-    .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-    }
-
-/* visi misi */
-.container1 {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .pricing-table {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .pricing-option {
-    /* border: 3px solid #ff6a00;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;*/
-    flex: 1 1 calc(33.333% - 20px); 
-    box-sizing: border-box;
-    /* background-color: #1f2833; */
-    /* width: 60%; */
-
-    max-width: 900px;
-    margin: 0 auto ;
-    padding: 30px;
-    border: 3px solid #ff6a00;
-    border-radius: 10px;
-    background-color: #1f2833;
-  }
-
-  .pricing-option img{
-    /* max-height: relative; */
-    max-width: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-
-  .pricing-option h2 {
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    color: #ff6a00;
-    
-  }
-
-  .pricing-option h3 {
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-  }
-
-  .pricing-option p {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .pricing-option ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    margin: 20px 0 0;
-  }
-  
-  .pricing-option ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ff6a00;
-    list-style: circle;
-    margin-left: 20px;
-  }
-  
-  .pricing-option ul li:last-child {
-    border-bottom: none;
-  }
-
-  /* UI-OMK LOGO */
-  .uiomklogo {
-    max-height: 10%;
-    height: auto;
-  }
-
-
-
-/* FEATURES */
-.features-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 900px;
-    margin: auto;
-    margin-top: 1rem;
-}
-
-.features {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    margin-top: 1rem;
-}
-
-.features.reverse {
-    flex-direction: row-reverse;
-}
-
-.features.reverse h3 {
-    text-align: right;
-}
-
-.features.reverse p {
-    text-align: right;
-}
-
-.features img {
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.features-info {
-    max-width: 600px;
-}
-
-.features h3 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e66000;
-    text-align: left;
-}
-
-.features-info p {
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: left;
-}
-
-.features-info a {
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
-}
-
-.features-info a:hover {
-    text-decoration: underline;
-}
-
-
-/* Services Grid */
-.services {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    margin-bottom: 2rem;
-}
-
-.service {
-    text-align: center;
-    padding: 0.5rem;
-}
-
-.service-icon {
-    background-color: #cb5500;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 0.5rem;
-    font-size: 20px;
-}
-
-.service p {
-    font-size: 0.8rem;
-}
-
-/* Products Section */
-.products {
-    background-color: #cb5500;
-    border-radius: 20px;
-    padding: 2rem 1rem;
-    margin: 1rem;
-    color: white;
-}
-
-.product-list {
-    margin: 1.5rem 0;
-}
-
-.product-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.8rem;
-}
-
-.product-icon {
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
-    margin-right: 0.8rem;
-}
-
-.category-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-}
-
-.category-description {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-/* Download Section */
-.download {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.download h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.store-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.store-button {
-    background-color: white;
-    color: #101820;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-    /* Benefits Slider Section */
-    .slider {
-        position: relative;
-        background-color: #973f00;
-        padding: 4rem 2rem;
-        text-align: center;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        margin-top: -50px;
-        z-index: 1;
-        overflow: hidden;
-    }
-
-    .slider h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: white;
-    }
-
-    .benefits-container {
-        position: relative;
-        max-width: 1000px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-
-    .benefits-wrapper {
-        display: flex;
-        transition: transform 0.5s ease;
-        width: 100%;
-    }
-
-    .benefit-slide {
-        min-width: 100%;
-        padding: 2rem;
-        box-sizing: border-box;
-        color: white;
-    }
-
-    .benefit-image-container {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        height: 30rem;
-        width: 100%;
-    }
-
-    .benefit-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        filter: brightness(0.65); /* This creates the dimming effect */
-    }
-
-    .benefit-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 2rem;
-        background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
-        text-align: left;
-    }
-
-    .benefit-slide h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    .benefit-slide p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-
-    /* Navigation Buttons */
-    .benefit-prev, .benefit-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(255, 255, 255, 0.3);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        cursor: pointer;
-        z-index: 10;
-        transition: background-color 0.3s;
-    }
-
-    .benefit-prev:hover, .benefit-next:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .benefit-prev {
-        left: 10px;
-    }
-
-    .benefit-next {
-        right: 10px;
-    }
-
-    /* Dots */
-    .benefit-dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .benefit-dot {
-        width: 10px;
-        height: 10px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .benefit-dot.active {
-        background-color: white;
-    }
-
-/* Join Section */
-.join {
-    padding: 2rem 1rem;
-    background-color: #412010;
-    color: white;
-}
-
-.join h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-.join-options {
-    display: grid;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.join-option {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-}
-
-.option-icon {
-    width: 30px;
-    height: 40px;
-    min-width: 60px;
-    background-color: #cb5500;
-    border-radius: 8px;
-    margin-right: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.option-icon p {
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-.option-content h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.option-content p {
-    color: #ccc;
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    text-align: left;
-}
-
-/* Why Choose Us Section */
-.wcs-desc{
-    text-align: left;
-}
-
-
-/* Base Section Styles */
-.join,
-.about1,
-.slider,
-.stats {
-    position: relative;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-/* Different Background Colors */
-.join { background-color: #421a00; }  /* Green */
-.about1 { background-color: #6e2e00; } /* Blue */
-.slider { background-color: #973f00; } /* Red */
-.stats { background-color: #e66000; }  /* Yellow */
-
-/* Rounded Corners on Top (except first section) */  
-.about1,
-.slider,
-.stats {
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    margin-top: -50px; /* Pull the section up */
-    z-index: 1;
-}
-
-
-.join {
-    z-index: 1;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-top: -20px;
-}
-
-
-/* Stats Section */
-.stats {
-    justify-items: center;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.stat-image {
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    height: 200px;
-    margin-bottom: 1rem;
-    background-color: #f0f0f0;
-    border-radius: 20px;
-}
-
-.big-number {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 1rem 0;
-}
+
+
 
    /* footer Section */
 
@@ -1512,15 +1516,16 @@ body::before {
 }
 
 /*phone m*/
-@media (min-width: 370px) and (max-width: 424px) {
+/* @media (min-width: 370px) and (max-width: 424px) {
     
 
-}
+} */
 
 /*phone l*/
-@media (min-width: 420px) and (max-width: 787px) {
+/* @media (min-width: 420px) and (max-width: 787px) {
 
-}
+} */
+
 
 /*Desktop default*/
 @media (min-width: 1024px) {
@@ -1743,8 +1748,13 @@ body::before {
     .next {
         right: 20px;
     }
+
 }
 
 
-/*ak mw test juga/
+
+
+
+
+
 

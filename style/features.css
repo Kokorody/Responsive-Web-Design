@@ -220,3 +220,37 @@
         width: auto;
     }
 }
+
+/*4k*/
+@media (min-width: 2550px ){
+
+    .features-title{
+        font-size: 6rem;
+    }
+    
+    .feature img{
+        max-width: 25%;
+    }
+
+    .feature h3{
+        font-size: 3vw;
+    }
+
+    .feature p{
+        font-size: 1.5vw;
+    }
+
+    .suggestion-icon{
+        font-size: 3vw;
+    }
+
+    .suggestion-box h3{
+        font-size: 2vw;
+    }
+
+    .suggestion-box p{
+        font-size: 1vw;
+    }
+
+
+}
