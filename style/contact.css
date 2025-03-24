@@ -7,24 +7,89 @@
     padding: 3rem 0;
 }
 
-.contact {
-display: flex;
-width: 60%;
-margin: 0;
-padding: 0;
-justify-content: center;
+/* .pricing-table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+
+.contact-container {
+  flex: 1 1 calc(33.333% - 20px); 
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 0 auto ;
+  padding: 2vw;
+  border: 0.3vw solid #ff6a00;
+  border-radius: 1vw;
+  background-color: #1f2833;
+}
+
+/* .contact-container img{
+  max-height: relative;
+  max-width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
+
+.contact-container h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ff6a00;
+  font-size: 4vw;
+  margin-bottom: 15px;
+  
+}
+
+.contact-container h3 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 2.5vw;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5vw;
+  margin-bottom: 15px;
+}
+
+.contact-container ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  margin: 20px 0 0;
+  font-size: 1.5vw;
+  margin-bottom: 15px;
+}
+
+.contact-container ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ff6a00;
+  list-style: circle;
+  margin-left: 20px;
+}
+
+.contact-container ul li:last-child {
+  border-bottom: none;
 }
 
 .form-group{
 margin-bottom: 1rem;
+font-size: 1.5vw;
+margin-bottom: 15px;
 }
 
 .form-group input, textarea{
 width: 100%;
-padding: 10px;
+padding: 1vw;
 border: 1px solid #ccc;
 border-radius: 5px;
 align-content: center;
+font-size: 1.5vw;
+margin-bottom: 15px;
 }
 
 .input-error {
@@ -41,17 +106,27 @@ font-weight: bold;
 text-decoration: none;
 margin: 0 auto;
 align-items: center;
+font-size: 1.5vw;
+margin-bottom: 15px;
 }
 
 hr {
-    height: 2px;
-    border: none;
-    background: #cb5500;
-    margin-bottom: 2rem;
+  height: 2px;
+  border: none;
+  background: #cb5500;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 767px) {
-    .contact {
-        width: 100%;
-      }
+  .contact {
+      width: 100%;
+    }
+}
+
+@media (min-width: 2550px) {
+  .contact-container {
+      max-width: 90vw;
+      
+      margin: 0 auto;
+  }
 }
