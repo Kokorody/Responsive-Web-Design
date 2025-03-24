@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
+    padding: 3vw 0vw;
 }
 
 /* .pricing-table {
@@ -12,6 +12,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 } */
+
 
 .contact-container {
   flex: 1 1 calc(33.333% - 20px); 
@@ -32,6 +33,13 @@
   margin-right: auto;
   width: 50%;
 } */
+
+.contact-title {
+  color: #ff6a00;
+  text-align: center;
+  font-size: 4vw;
+  margin-bottom: 10px;
+}
 
 .contact-container h2 {
   font-family: "Poppins", sans-serif;
@@ -68,7 +76,7 @@
 .contact-container ul li {
   padding: 8px 0;
   border-bottom: 1px solid #ff6a00;
-  list-style: circle;
+  list-style: none;
   margin-left: 20px;
 }
 
@@ -121,12 +129,52 @@ hr {
   .contact {
       width: 100%;
     }
+
+  .contact-title{
+    font-size: 100px;
+  }
+
+  .contact-title {
+    color: #ff6a00;
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 10px;
+  }
+  
+  .contact-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-container h3 {
+    font-size: 1rem;
+  }
+  
+  .contact-container p {
+    font-size: 0.95rem;
+  }
+  
+  .contact-container ul {
+    font-size: 0.95rem;
+  }
+
+  .form-group{
+    font-size: 0.95rem;;
+    }
+    
+  .form-group input, textarea{
+  font-size: 0.95rem;
+  }
+  
+  .submit{
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  }
 }
+
 
 @media (min-width: 2550px) {
   .contact-container {
       max-width: 90vw;
-      
       margin: 0 auto;
   }
 }
