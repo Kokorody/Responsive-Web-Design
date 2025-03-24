@@ -3,7 +3,7 @@
 }
 
 .about-container {
-    max-width: 900px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 2vw;
     border: 0.3vw solid #ff6a00;
@@ -45,7 +45,6 @@
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
-    font-size: 1.5vw;
 }
 
 .about-list li {
@@ -53,6 +52,7 @@
     border-bottom: 0.1vw solid #ff6a00;
     list-style: circle;
     margin-left: 1vw;
+    /* font-size: 1vw; */
 }
 
 .about-list li:last-child {
@@ -94,6 +94,10 @@ hr {
         width: 70%;
         height: auto;
     }
+
+    /* .about-list li {
+        font-size: 1vw;
+    } */
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -107,7 +111,7 @@ hr {
 
 @media (min-width: 2550px) {
     .about-container {
-        max-width: 90vw;
+        max-width: 90%;
     }
 
     .about-logo img {
