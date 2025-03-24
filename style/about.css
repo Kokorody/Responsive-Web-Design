@@ -28,13 +28,15 @@
 .about-title {
     color: #ff6a00;
     text-align: center;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: 4.5vh;
     margin-bottom: 15px;
 }
 
 .about-text {
     text-align: left;
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    font-size: 2.5vh;
     line-height: 1.6;
     margin-bottom: 10px;
 }
@@ -43,6 +45,7 @@
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
+    font-size: 2.5vh;
 }
 
 .about-list li {
@@ -54,6 +57,14 @@
 
 .about-list li:last-child {
     border-bottom: none;
+}
+
+hr {
+    height: 0.2vh;
+    border: none;
+    background: #cb5500;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
 }
 
 @media (max-width: 760px) {
@@ -87,5 +98,15 @@
 
         width: 50%;
         height: auto;
+    }
+}
+
+@media (min-width: 2550px) {
+    .about-container {
+        max-width: 90vw;
+    }
+
+    .about-logo img {
+        width: 30%;
     }
 }
