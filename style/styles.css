@@ -230,6 +230,7 @@ body::before {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
 
         .button {
@@ -435,6 +436,7 @@ body::before {
                 display: inline-block;
                 border-radius: 50%;
                 cursor: pointer;
+                margin: 0rem 0.5rem;
             }
 
             .active {
@@ -1720,6 +1722,10 @@ body::before {
 /*large dekstop*/
 @media ((min-width: 1400px) and (max-width: 2550px)) {
 
+    .header a{
+        font-size: 1.3rem;
+    }
+
     .hero h1{
         text-align: center;
     }
@@ -1751,8 +1757,178 @@ body::before {
 
 }
 
+/*4k*/
+@media ((min-width: 2550px) and (min-height:1000px)){
+    .hero{
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .hero h1{
+        font-size: 4vw;
+        text-align: center;
+        margin: 0rem 15vw 3rem;
+    }
 
 
+    .button{
+        height: auto;
+        width: auto;
+        font-size: 2vw;
+        border-radius: 5rem;
+        padding: 2rem;
+    }
+
+    .about h1{
+        font-size: 3vw;
+    }
+
+    .about img{
+        height: 25vw;
+        width: auto;
+    }
+
+    .about h2{
+        font-size: 2vw;
+    }
+
+    .join{
+        height: 70vh;
+
+    }
+
+    .join h2{
+        font-size: 3vw;
+    }
+
+    .join-options{
+        margin-top: 5vw;
+        max-width: 1500px;
+        gap: 3rem;
+    }
+
+    .option-content h3{
+        font-size: 2vw;
+    }
+
+    .option-icon{
+        height: 3vw;
+        width: 5vw;
+        margin-right: 3rem;
+    }
+
+    .option-icon p{
+        font-size: 2vw;
+    }
+
+    .option-content p{
+        font-size: 1.2vw;
+    }
+
+    .about1 h1{
+        font-size: 3vw;
+        margin-bottom: 3rem;
+    }
+
+    /* .slide{
+
+    } */
+
+    .slideshow-container{
+        max-width: 80%;
+    }
+
+    .slide img{
+        width: 50%;
+    }
+
+    .prev, .next{
+        font-size: 3vw;
+        border-radius: unset;
+    }
+
+    .prev{
+        left: 1rem;
+    }
+     .next{
+        right: 1rem;
+    }
+
+    .slide-content{
+        height: auto;
+    }
+
+    .slide-content h3{
+        font-size: 2vw;
+    }
+
+    .slide-content p{
+        font-size: 1.2vw;
+    }
+
+    .dot {
+        width: 1vw;
+        height: 1vw;
+        margin: 0rem 0.5    rem;
+    }
+
+    .slider h2{
+        font-size: 3vw;
+    }
+
+    .benefits-container {
+        max-width: 80vw;
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 55rem; 
+        height: 80vh; 
+    }
+    
+
+    .benefit-image-container {
+        height: 100%; 
+        max-height: 80vh; 
+    }
+
+    .benefit-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    
+    .benefit-slide h3 {
+        font-size: 2.5vw;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+
+    }
+    
+    .benefit-slide p {
+        font-size: 1.5vw;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .benefit-dot {
+        width: 1vw;
+        height: 1vw;
+
+    }
+
+    .benefit-prev, .benefit-next{
+        width: 3vw;
+        height: 3vw;
+        font-size: 2vw;
+    }
+
+
+}
 
 
 

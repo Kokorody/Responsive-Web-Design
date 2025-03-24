@@ -6,9 +6,6 @@
         text-align: center;
     } */
 
-    .header {
-        height: 10vh;
-    }
 
     .logo{
         margin-left: 7rem;
@@ -25,7 +22,7 @@
     }
 
     .header a{
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
 
     .nav-menu ul{
@@ -118,7 +115,7 @@
     /*download section*/
 
     .download {
-        padding: 2rem 1rem;
+        padding: 10rem 1rem;
         text-align: center;
     }
 
