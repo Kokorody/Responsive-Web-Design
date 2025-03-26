@@ -1852,7 +1852,7 @@ body::before {
     }
 
     .slide-content{
-        height: auto;
+        height: 13rem;
     }
 
     .slide-content h3{
