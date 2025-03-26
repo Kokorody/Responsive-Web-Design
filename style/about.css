@@ -29,7 +29,7 @@
     color: #ff6a00;
     text-align: center;
     /* font-size: 2rem; */
-    font-size: 4vw;
+    font-size: 3vw;
     margin-bottom: 15px;
 }
 
@@ -73,6 +73,10 @@ hr {
         display: none;
     }
 
+    .about-container{
+        max-width: unset;
+    }
+
     .about-section{
         padding: unset;
     }
@@ -107,6 +111,14 @@ hr {
         width: 50%;
         height: auto;
     }
+
+    .about-title {
+        font-size: 4vw;
+    }
+
+    .about-text{
+        font-size: 2vw;
+    }
 }
 
 @media (min-width: 2550px) {
@@ -117,4 +129,5 @@ hr {
     .about-logo img {
         width: 30%;
     }
+    
 }
