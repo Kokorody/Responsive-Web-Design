@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isValid) {
                 displayError(errorMessages);
             } else {
-                document.getElementById('errorMsg').innerHTML = '<span style="color: green;">Pesan berhasil dikirim!</span>';
+                document.getElementById('errorMsg').innerHTML = '<p  style="color: green; font-size: ">Pesan berhasil dikirim!</p>';
                 // Optionally reset form:
                 // this.reset();
             }
