@@ -18,12 +18,12 @@
     margin-bottom: 15px;
 }
 
-.about-logo img {
-    max-width: 70%;
-    width: 40%;
-    height: auto;
-    border-radius: 2rem;
-}
+    .about-logo img {
+        max-width: 70%;
+        width: 40%;
+        height: auto;
+        border-radius: 2rem;
+    }
 
 .about-title {
     color: #ff6a00;
@@ -118,6 +118,12 @@ hr {
 
     .about-text{
         font-size: 2vw;
+    }
+}
+
+@media ((min-width: 1400px) and (max-width: 2550px)) {
+    .about-logo img{
+        width: 35%;
     }
 }
 
