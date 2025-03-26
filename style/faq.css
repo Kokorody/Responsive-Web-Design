@@ -116,6 +116,10 @@
     .question-text, .answer-text {
         font-size: 0.95rem;
     }
+
+    .container h3 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
